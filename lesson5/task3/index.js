@@ -3,5 +3,5 @@ function getEvenOdd(number) {
 
 };
 
-getEvenOdd(9);
-getEvenOdd(10);
+//getEvenOdd(9);
+//getEvenOdd(10);
