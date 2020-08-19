@@ -1,8 +1,9 @@
 function increaseEvenEl(arr, delta) {
-    newArr = [];
+
     if (!Array.isArray(arr)) {
         return null;
-    }
+    };
+    
     return arr.map((el) => el % 2 == 0 ? el + delta : el)
 
 
@@ -11,4 +12,4 @@ function increaseEvenEl(arr, delta) {
 
 
 
-console.log(increaseEvenEl([1, 2, 3, 4, 5, 6, 7], 20))
+console.log(increaseEvenEl([2, 5, 6, 8, 11, 9, 4], 20))
