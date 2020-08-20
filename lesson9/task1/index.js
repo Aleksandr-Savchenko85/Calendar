@@ -1,4 +1,4 @@
-function tranformToObject(arr) {
+function transformToObject(arr) {
     let obj = {};
     arr.forEach(el => {
         obj[el] = el;
@@ -9,5 +9,5 @@ function tranformToObject(arr) {
 }
 
 
-console.log(tranformToObject(['a', 17.1, "John Doe"]))
-console.log(tranformToObject([]))
+console.log(transformToObject(['a', 17.1, "John Doe"]))
+console.log(transformToObject([]))
