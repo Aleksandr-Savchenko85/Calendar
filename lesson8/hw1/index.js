@@ -1,12 +1,12 @@
 const transaction = {
-    currency: 'USD',
-    value: 170,
-    operation: 'sale',
-    agent: {
-        country: 'Ukraine',
-        company: 'NYSE'
-    },
-    'operation time': 1584029990001
+  currency: 'USD',
+  value: 170,
+  operation: 'sale',
+  agent: {
+    country: 'Ukraine',
+    company: 'NYSE'
+  },
+  'operation time': 1584029990001
 };
 
 /* выведите в консоль значение свойства 'currency' с помощью точки */
@@ -16,10 +16,10 @@ console.log(transaction['value'])
 
 const key = 'operation';
 
-  /* выведите в консоль значение свойства, название которого находится в переменной key - используйте квадратные скобки */
-  console.log([key])
+/* выведите в консоль значение свойства, название которого находится в переменной key - используйте квадратные скобки */
+console.log([key])
 /* выведите в консоль значение свойства 'company' используя квадратные скобки */
-console.log(transaction.agent['company'])
+console.log(transaction['agent']['company'])
 
 /* выведите в консоль значение свойства 'country' используя точку */
 console.log(transaction.agent.country)
