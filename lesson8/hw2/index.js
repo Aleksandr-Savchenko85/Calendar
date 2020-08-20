@@ -8,7 +8,7 @@ const user = {
  
   const anotherKey = 'married';
   /* название свойства хранится в переменной anotherKey. Присвойте объекту такое свойство со значением false */
-  user.anotherKey = false;
+  user['married'] = false;
   /* присвойте объекту свойство 'favorite music' со значением 'rock' */
   user['favorite music'] = 'rock'
   /* присвойте объекту свойство 'address', которое будет пустым объкетом */
