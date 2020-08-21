@@ -26,12 +26,13 @@ const addPropertyV4 = (obj, property) => {
   return Object.assign({ ...obj }, obj_copy)
 
 };
-const result1 = addPropertyV1(obj, '123456');
-const result2 = addPropertyV2(obj, '123456');
-const result3 = addPropertyV3(obj, '123456');
-const result4 = addPropertyV4(obj, '123456');
+/* const result1 = addPropertyV1(obj, '555555');
+const result2 = addPropertyV2(obj, '555555');
+const result3 = addPropertyV3(obj, '555555');
+const result4 = addPropertyV4(obj, '555555');
 
 console.log(result1);
 console.log(result2);
 console.log(result3);
 console.log(result4);
+ */
