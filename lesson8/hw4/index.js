@@ -3,7 +3,7 @@ const obj = {
 };
 
 const addPropertyV1 = (obj, property) => {
-  obj['id'] = property;
+  obj.id = property;
   return obj;
 
 };
