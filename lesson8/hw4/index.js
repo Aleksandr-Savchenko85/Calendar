@@ -2,26 +2,26 @@ const userData = {
   name: 'Sam',
 };
 
-const adduserIdV1 = (userData, userId) => {
+const addPropertyV1 = (userData, userId) => {
   userData.id = userId;
   return userData;
 
 };
 
-const adduserIdV2 = (userData, userId) => {
+const addPropertyV2 = (userData, userId) => {
   const key = { id: userId };
   return Object.assign(userData, key)
 
 };
 
-const adduserIdV3 = (userData, userId) => {
+const addPropertyV3 = (userData, userId) => {
   const key = { id: userId };
   let userData_copy = Object.assign({}, userData, key)
   return userData_copy;
 
 };
 
-const adduserIdV4 = (userData, userId) => {
+const addPropertyV4 = (userData, userId) => {
   let userData_copy = { id: userId };
   return Object.assign({ ...userData }, userData_copy)
 
