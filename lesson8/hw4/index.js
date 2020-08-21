@@ -1,31 +1,30 @@
 const userData = {
-  name: 'Sam',
+  name: 'Boby',
 };
 
-const addPropertyV1 = (userData, userId) => {
-  userData.id = userId;
+const addPropertyV1 = (userData, userld) => {
+  userData.id = userld;
   return userData;
 
 };
 
-const addPropertyV2 = (userData, userId) => {
-  const key = { id: userId };
+const addPropertyV2 = (userData, userld) => {
+  const key = { id: userld };
   return Object.assign(userData, key)
 
 };
 
-const addPropertyV3 = (userData, userId) => {
-  const key = { id: userId };
+const addPropertyV3 = (userData, userld) => {
+  const key = { id: userld };
   let userData_copy = Object.assign({}, userData, key)
   return userData_copy;
 
 };
 
-const addPropertyV4 = (userData, userId) => {
-  let userData_copy = { id: userId };
+const addPropertyV4 = (userData, userld) => {
+  let userData_copy = { id: userld };
   return Object.assign({ ...userData }, userData_copy)
 
-};
 /* const result1 = adduserIdV1(userData, '555555');
 const result2 = adduserIdV2(userData, '555555');
 const result3 = adduserIdV3(userData, '555555');
