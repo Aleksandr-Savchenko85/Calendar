@@ -4,7 +4,7 @@ let add = number => {
     return memory += number;
 }
 
-let descrase = number => {
+let descrease = number => {
     return memory -= number;
 }
 let reset = () => {
@@ -13,7 +13,7 @@ let reset = () => {
 let getMemo = () => {
     return memory;
 }
-export {add, descrase, reset, getMemo}
+export {add, descrease, reset, getMemo}
 
 console.log(add(10))
 console.log(descrase(10))
