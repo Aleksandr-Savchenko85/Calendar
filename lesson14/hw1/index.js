@@ -13,7 +13,7 @@ let reset = () => {
 let getMemo = () => {
     return memory;
 }
-//export {add, descrase, reset, getMemo}
+export {add, descrase, reset, getMemo}
 
 console.log(add(10))
 console.log(descrase(10))
