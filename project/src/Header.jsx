@@ -3,19 +3,19 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <header className="calendar__header">
-            <div className="calendar__day-label day-label">
-                <span className="day-label__day-name">mon</span>
-                <span className="day-label__day-number">16</span>
-            </div>
-            <div className="calendar__day-label day-label">...</div>
-            <div className="calendar__day-label day-label">...</div>
-            <div className="calendar__day-label day-label">...</div>
-            <div className="calendar__day-label day-label">...</div>
-            <div className="calendar__day-label day-label">...</div>
-            <div className="calendar__day-label day-label">...</div>
-
-        </header>
+        <header className="header">
+        <button className="button create-event-btn"><i className="fas fa-plus create-event-btn__icon"></i>Create</button>
+        <div className="navigation">
+            <button data-direction="today" className="navigation__today-btn button">Today</button>
+            <button data-direction="prev" className="icon-button navigation__nav-icon">
+                <i className="fas fa-chevron-left"></i>
+            </button>
+            <button data-direction="next" className="icon-button navigation__nav-icon">
+                <i className="fas fa-chevron-right"></i>
+            </button>
+            <span className="navigation__displayed-month">Jun - Jul 2019</span>
+        </div>
+    </header>
     )
 };
 

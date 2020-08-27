@@ -1,9 +1,10 @@
 import React from 'react';
+import Header from './Header.jsx'
 
 
 const App = ()=>{
     return(
-        <div><span>Hello user!</span></div>
+        <Header/>
     )
 };
 
