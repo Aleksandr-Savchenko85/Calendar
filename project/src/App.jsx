@@ -10,18 +10,12 @@ const App = () => {
     return (
 
         <div className="page">
-            <Header />
+            <Header/>
+            <div className="lines"><Week/></div>
+            <Navigation />
             <section className="calendar">
-                <Navigation />
-
-                <div className="calendar__body">
-                    
-                    <Sidebar />
-                    <Week />
-
-
-                </div>
-
+            <div className="calendar__body"><Sidebar /></div>
+                
 
 
             </section>
