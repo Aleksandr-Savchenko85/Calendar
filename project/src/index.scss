@@ -3,39 +3,4 @@
     font-family: Roboto;
   }
   
-  body {
-    font-family: Roboto;
-    margin: 0;
-    overflow-x: hidden;
-    width: 100%;
-  }
-  header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    min-height: 80px;
-    border: 1px solid rgb(231, 231, 231);
-  }
-  .create-event-btn{
-    background:wheat;
-    font-weight: 400;
-    min-width: 140px;
-    border-radius: 5px;
-    height: 45px;
-    margin-left: 40px;
-    transition: 0.3s;
-      }
-  .header_button-today{
-      min-width: 120px;
-      border-radius: 5px;
-      height: 45px;
-      margin: 0 40px;
-      transition: 0.3s;
-      background:wheat;
-      }
-      .navigation__nav-icon{
-        margin: 5px;
-        background-color: rgb(231, 231, 9);
-      }
-    
-    
+  
