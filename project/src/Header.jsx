@@ -14,7 +14,7 @@ const Header = () => {
                 </button><button data-direction="next" className="icon-button navigation__nav-icon">
                     <i className="fas fa-chevron-right"></i>
                 </button>
-                <span className="text-month">August 2020</span>
+                <span className="text-month">August</span>
 
 
 

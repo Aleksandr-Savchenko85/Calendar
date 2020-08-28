@@ -1,22 +1,33 @@
 import React from 'react';
 import Header from './Header.jsx';
 import './index.scss';
-import Sidebar from './Sidebar.jsx'
+import Navigation from './Navigation';
+import Sidebar from './Sidebar';
+import Week from './Week';
 
 
-const App = ()=>{
-    return(
+const App = () => {
+    return (
 
         <div className="page">
-             <Header/>
-             <div className="calendar__body">
-             <Sidebar/>
+            <Header />
+            <section className="calendar">
+                <Navigation />
 
-             
-             </div>
-            
-             </div>
-       
+                <div className="calendar__body">
+                    
+                    <Sidebar />
+                    <Week />
+
+
+                </div>
+
+
+
+            </section>
+           
+        </div>
+
     )
 };
 
