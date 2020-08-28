@@ -1,10 +1,13 @@
 import React from 'react';
-import Header from './Header.jsx'
+import Header from './Header.jsx';
+import './index.scss';
 
 
 const App = ()=>{
     return(
-        <Header/>
+
+        <div className="page"> <Header/></div>
+       
     )
 };
 
