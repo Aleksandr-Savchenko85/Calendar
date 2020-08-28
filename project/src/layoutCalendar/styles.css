@@ -1,0 +1,170 @@
+* {
+box-sizing: border-box;
+font-family: "Roboto";
+}
+
+body{
+display: block;
+font-size: 20px;
+margin: 3px 2px 3px 2px
+
+}
+
+.page{
+height: 100vh;
+display: flex;
+flex-direction: column;
+position: relative;
+overflow: scroll;
+  
+}
+
+.header{
+  display: flex;
+  padding: 30px;
+ 	align-items: center;
+  min-height: 50px;
+  border: 3px solid rgb(196, 196, 196);
+  background-color: cornsilk;
+    
+}
+
+.button{
+  min-width: 100px;
+  border-radius: 5px;
+  height: 45px;
+  margin: 0 20px;
+  background: rgb(162, 214, 221);
+  margin: 10px;
+  font-size: 20px;
+  
+  }
+  .icon-button{
+  height: 30px;
+  border-radius: 5px;
+  margin: 10px;
+  width: 40px;
+    
+  }
+  .text-month{
+  margin: 400px;
+  font-weight: 700;
+	font-size: 30px;
+  color:rgb(52, 11, 90); 
+    
+  }
+
+  .day-label__day-name{
+  color:brown;
+  font-size: 12px;
+  font-weight: 700;
+  }
+
+  .day-label__day-number{
+  font-size: 25px;
+  font-weight: 510;
+  }
+
+  .calendar{
+  display: block;
+  font-size: 20px;
+    
+  }
+
+  .calendar__header{
+  display: flex;
+  font-size: 25px;
+  background-color:mediumaquamarine;
+  border: 1px solid rgb(196, 196, 196);
+  
+  }
+  .calendar__body{
+  box-sizing: content-box;
+  display: block;
+  font-size: 20px;
+  background-color: cornsilk;
+  border: 1px solid rgb(196, 196, 196);
+
+  }
+
+.calendar__day-label{
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  position: relative;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-left: 90px;
+  flex-direction: column;
+  width: 15%;
+
+}
+.lines{
+  display: flex;
+  width:100%;
+  font-size: 20px;
+  
+  
+}
+.calendar__hours{
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  flex-direction: column;
+  color: gray;
+  width: 80px;
+  margin-bottom: 20px;
+  
+}
+.calendar_hours-time-gtm{
+  color: black;
+  display: block;
+  font-size: 14px;
+  height: 20px;
+  width: 75px;
+  padding-left: 5px;
+  font-weight: 700;
+
+  
+  
+
+}
+.calendar_hours-time{
+  color: black;
+  display: block;
+  font-size: 15px;
+  height: 60px;
+ 
+}
+
+.calendar__day:first-child{
+border-left: 2px solid gray ;
+}
+
+.calendar__day{
+  width: 15%;
+  border-right: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+
+}
+
+.calendar_day-line{
+  display: block;
+  font-size: 20px;
+  height: 32px;
+  border-bottom: 1px solid gray
+}
+.calendar_day-active{
+  box-sizing: content-box;
+  display: block;
+  font-size: 20px;
+  height: 60px;
+  border-bottom: 1px solid gray;
+  width: 100%;
+
+}
+
+
+
