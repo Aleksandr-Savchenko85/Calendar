@@ -32,6 +32,14 @@
   font-size: 20px;
   
   }
+.button-create:hover{
+  background-color:cyan;
+  }
+
+.button-today:hover{
+  background-color:cyan;
+  }
+
 
 .pointer_left,.pointer_right{
   height: 30px;
@@ -46,7 +54,10 @@
   font-weight: 700;
   font-size: 30px;
   color:rgb(52, 11, 90); 
-  }
+  font-family: cursive
+ 
+ 
+}
 
 .calendar{
   display: block;
