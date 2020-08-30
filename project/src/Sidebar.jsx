@@ -1,7 +1,9 @@
 import React from 'react';
 
 const Sidebar = () => {
+
     return (
+
         <div className="calendar__hours">
             <div className="calendar_time-gtm">GMT+02</div>
             <div className="calendar_hours-time"></div>
@@ -31,7 +33,7 @@ const Sidebar = () => {
             <div className="calendar_hours-time">11 PM</div>
 
         </div>
-    
+
 
     )
 };
