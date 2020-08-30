@@ -7,18 +7,22 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  position: relative;
+  position: static;
   overflow: scroll;
     
   }
 
 .header{
   display: flex;
-  padding: 30px;
+ 
   align-items: center;
   min-height: 50px;
   border: 3px solid rgb(196, 196, 196);
   background-color: cornsilk;
+  position: fixed;
+  width: 99.5%;
+  
+  
   
  
     
@@ -73,6 +77,7 @@
 .calendar{
   display: block;
   font-size: 20px;
+
     
   }
 
@@ -91,11 +96,9 @@
   display: flex;
   font-size: 25px;
   background-color: cornsilk;
+  
 
-  
- 
- 
-  
+   
     
   }
   
@@ -116,8 +119,10 @@
   display: block;
   font-size: 20px;
   background-color: cornsilk;
- 
- 
+  
+  
+  
+  
   }
   
 .sidebar, .lines{
