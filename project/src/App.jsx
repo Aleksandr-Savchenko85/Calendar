@@ -1,15 +1,20 @@
 import React from 'react';
 import Header from './Header.jsx';
-import './index.scss';
-import Navigation from './Navigation';
-import Sidebar from './Sidebar';
-import Week from './Week';
+import Navigation from './Navigation.jsx';
+import Sidebar from './Sidebar.jsx';
+import Week from './Week.jsx';
+import moment from 'moment';
 
 
-const App = () => {
-    return (
 
-        <div className="page">
+export default class App extends React.Component{
+    state ={
+
+    }
+
+    render(){
+        return(
+            <div className="page">
             <Header />
             <div className="calendar">
                 <Navigation />
@@ -17,14 +22,21 @@ const App = () => {
             <div className="calendar-body">
                 <div className="sidebar">
                     <Sidebar />
-                    <Week />
+                    <Week/>
+                    
                 </div>
             </div>
 
         </div>
 
-    )
+        )
+        
+    
+
+    }
+    
+
+        
 };
 
 
-export default App;
