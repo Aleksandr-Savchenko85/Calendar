@@ -3,38 +3,37 @@ import React from 'react';
 const Navigation = () => {
     return (
 
-        <header className="calendar__header">
+        <div class="calendar-header">
 
-            <div className="calendar__day-label day-label">
-                <div className="day-label__day-name">MON</div>
-                <div className="day-label__day-number">25</div>
+            <div class="calendar__day-label day-label">
+                <div class="day-name">MON</div>
+                <div class="day-number">25</div>
             </div>
-            <div className="calendar__day-label day-label">
-                <div className="day-label__day-name">TUE</div>
-                <div className="day-label__day-number">26</div>
+            <div class="calendar__day-label day-label">
+                <div class="day-name">TUE</div>
+                <div class="day-number">26</div>
             </div>
-            <div className="calendar__day-label day-label">
-                <div className="day-label__day-name">WED</div>
-                <div className="day-label__day-number">27</div>
+            <div class="calendar__day-label day-label">
+                <div class="day-name">WED</div>
+                <div class="day-number">27</div>
             </div>
-            <div className="calendar__day-label day-label">
-                <div className="day-label__day-name">THU</div>
-                <div className="day-label__day-number">28</div>
+            <div class="calendar__day-label day-label">
+                <div class="day-name">THU</div>
+                <div class="day-number">28</div>
             </div>
-            <div className="calendar__day-label day-label">
-                <div className="day-label__day-name">FRI</div>
-                <div className="day-label__day-number">29</div>
+            <div class="calendar__day-label day-label">
+                <div class="day-name">FRI</div>
+                <div class="day-number">29</div>
             </div>
-            <div className="calendar__day-label day-label">
-                <div className="day-label__day-name">SAT</div>
-                <div className="day-label__day-number">30</div>
+            <div class="calendar__day-label day-label">
+                <div class="day-name">SAT</div>
+                <div class="day-number">30</div>
             </div>
-            <div className="calendar__day-label day-label">
-                <div className="day-label__day-name">SUN</div>
-                <div className="day-label__day-number">31</div>
+            <div class="calendar__day-label day-label">
+                <div class="day-name">SUN</div>
+                <div class="day-number">31</div>
             </div>
-
-        </header>
+        </div>
     )
 };
 

@@ -10,16 +10,17 @@ const App = () => {
     return (
 
         <div className="page">
-           <header className="header"><Header/></header>
-           <div className="calendar">
-               <Navigation/>
-               <div className='lines'>
-                   <Sidebar/>
-               </div>
-               <div className="lines">
-                   <Week/>
-               </div>
-           </div>
+            <Header />
+            <div className="calendar">
+                <Navigation />
+            </div>
+            <div className="calendar-body">
+                <div className="sidebar">
+                    <Sidebar />
+                    <Week />
+                </div>
+            </div>
+
         </div>
 
     )

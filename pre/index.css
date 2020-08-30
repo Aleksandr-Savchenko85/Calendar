@@ -1,7 +1,7 @@
 *{
     box-sizing: border-box;
     font-family: "Roboto";
-}
+   }
 
 .page{
     height: 100vh;
@@ -20,7 +20,7 @@
     border: 3px solid rgb(196, 196, 196);
     background-color: cornsilk;
       
-  }
+   }
 
 .button-create, .button-today{
     min-width: 100px;
@@ -46,7 +46,7 @@
     font-weight: 700;
     font-size: 30px;
     color:rgb(52, 11, 90); 
-  }
+    }
   
 .calendar{
     display: block;
@@ -90,7 +90,7 @@
     font-size: 20px;
     background-color: cornsilk;
     border: 1px solid rgb(196, 196, 196);
-        }
+    }
     
 .sidebar, .lines{
     box-sizing: content-box;
@@ -108,7 +108,8 @@
     color: gray;
     width: 80px;
     margin-bottom: 20px;
-      }
+    }
+
 .calendar_time-gtm{
     color: black;
     display: block;
@@ -125,33 +126,35 @@
     font-size: 15px;
     height: 60px;
        
-      }
+    }
 
-      .calendar__day:first-child{
-        border-left: 2px solid gray ;
-        }
+.calendar__day:first-child{
+    border-left: 2px solid gray ;
+    }
         
-        .calendar__day{
-          width: 15%;
-          border-right: 1px solid gray;
-          display: flex;
-          flex-direction: column;
-          font-size: 20px;
+.calendar__day{
+    width: 15%;
+    border-right: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
         
-        }
-        .calendar_day-line{
-            display: block;
-            font-size: 20px;
-            height: 32px;
-            border-bottom: 1px solid gray
-          }
-          .calendar_day-active{
-            box-sizing: content-box;
-            display: block;
-            font-size: 20px;
-            height: 60px;
-            border-bottom: 1px solid gray;
-            width: 100%;
+    }
+
+.calendar_day-line{
+    display: block;
+    font-size: 20px;
+    height: 32px;
+    border-bottom: 1px solid gray
+    }
+
+.calendar_day-active{
+    box-sizing: content-box;
+    display: block;
+    font-size: 20px;
+    height: 60px;
+    border-bottom: 1px solid gray;
+    width: 100%;
           
-          }
+    }
           
