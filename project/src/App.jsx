@@ -9,7 +9,26 @@ import moment from 'moment';
 
 export default class App extends React.Component{
     state ={
+        Date: moment().week('week'),
+      
 
+    }
+    goNext = () => {
+        this.setState({
+           Date: this.state.Date.add(1, 'week')
+        })
+    }
+
+    goPrev = () => {
+        this.setState({
+            Date: this.state.currentDate.add(-1, 'week')
+        })
+    }
+
+    returnToday = () => {
+        this.setState({
+            currentDate: moment().week('week')
+        })
     }
 
     render(){
