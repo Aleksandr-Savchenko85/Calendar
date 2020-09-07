@@ -16,25 +16,28 @@
 .header{
   width: 100%;
   display: flex;
-  padding: 30px;
+  padding: 10px;
   align-items: center;
   min-height: 50px;
   position: fixed;
   background-color: cornsilk;
+  
  
     
  }
+ 
 
-.button-create, .button-today{
-  min-width: 100px;
+ .button-today,.button-create{
+  width: 120px;
   border-radius: 5px;
   height: 45px;
-  margin: 0 20px;
+  margin:  10px;
   background: rgb(162, 214, 221);
-  margin: 10px;
   font-size: 20px;
+ }
   
-  }
+  
+  
 
 .button-create:hover{
   background-color:cyan;
@@ -92,7 +95,7 @@
   }
 
 .calendar-header{
-  top:85px;
+  top:75px;
   position: fixed;
   width: 100%;
   display: flex;
