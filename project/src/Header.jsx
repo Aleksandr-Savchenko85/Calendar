@@ -9,7 +9,7 @@ const Header = () => {
                 <button className="button-today"  data-direction="today">Today</button>
                 <button className="pointer_left"  data-direction="prev"><i className="fas fa-chevron-left"></i></button>
                 <button className="pointer_right" data-direction="next"><i className="fas fa-chevron-right"></i></button>
-                <span className="text-month">August</span>
+                <span className="text-month">September</span>
             </div>
         </header>
 

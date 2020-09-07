@@ -1,6 +1,7 @@
 *{
   box-sizing: border-box;
   font-family: "Roboto";
+  margin: 0;
  }
 
 .page{
@@ -13,11 +14,12 @@
   }
 
 .header{
+  width: 100%;
   display: flex;
   padding: 30px;
   align-items: center;
   min-height: 50px;
-  
+  position: fixed;
   background-color: cornsilk;
   
   
@@ -91,6 +93,9 @@
   }
 
 .calendar-header{
+  top:85px;
+  position: fixed;
+  width: 100%;
   display: flex;
   font-size: 25px;
   background-color: cornsilk;
@@ -128,9 +133,11 @@
   display: flex;
   width:100%;
   font-size: 20px;
+
   
            
   }
+  
 
 .calendar__hours{
   display: flex;
@@ -187,6 +194,6 @@
   height: 60px;
   border-bottom: 1px solid gray;
   width: 100%;
-        
+
   }
   
