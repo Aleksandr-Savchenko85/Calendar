@@ -1,7 +1,14 @@
 
-let element = document.querySelector('.num');
+const element = document.querySelector('.task-status');
 
-let div = Object.values(element)
+hendle =()=>{
+    if(element.checked == true){
+        console.log(
+        'This is a true'
+        )}else
+            {console.log('This is a false')
+        }
+    }
 
 
-
+element.addEventListener('change', hendle)

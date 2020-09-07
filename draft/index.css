@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    background-color: cyan;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.task-status{
+    height: 45px;
+    width: 45px;
+ 
+}
+.bi{
+    font-size: 30px;
+    margin-left: 20px;
+    color: red;
+}
+button{
+    display: flex;
+    justify-content: center;
+    margin-left: 50px;
+}
