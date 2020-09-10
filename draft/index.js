@@ -1,14 +1,6 @@
+var isSquare = function (n) {
+    
+    return Math.sqrt(n) % 1 ===0  ? true : false
+}
 
-const element = document.querySelector('.task-status');
-
-hendle =()=>{
-    if(element.checked == true){
-        console.log(
-        'This is a true'
-        )}else
-            {console.log('This is a false')
-        }
-    }
-
-
-element.addEventListener('change', hendle)
+console.log(isSquare(-1))
