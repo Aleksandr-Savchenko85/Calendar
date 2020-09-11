@@ -1,12 +1,16 @@
 import React from "react";
 import TimeHours from './TimeHours';
-import Week from './Week'
+import Week from './Week';
+import Lines from './Lines';
 
-const MainBoard =()=>{
-    return(
+const MainBoard = () => {
+    return (
         <div className="main-board">
-            <TimeHours/>
-            <Week/>
+            <TimeHours />
+            <Lines />
+            <Week />
+
+
         </div>
 
     )

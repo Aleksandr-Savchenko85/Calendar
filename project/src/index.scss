@@ -25,7 +25,7 @@
     width: 100vw;
     height: 70px;
     margin: 0px;
-    border-bottom: 1px solid #616161;
+    border-bottom: 1px solid gray;
 }
 
 .header-main{
@@ -114,7 +114,7 @@
     height: 24px;
     width: 10px;
     margin-top: 56px;
-    border-bottom: 1px solid #616161;
+    border-bottom: 1px solid gray;
     border-collapse: collapse;
 } 
 
@@ -174,8 +174,8 @@
 
 .lines__line{
     height: 60px;
-    width: 8px;
-    border: 1px solid #616161;
+    width: 10px;
+    border: 1px solid grey;
     border-left: none;
     border-bottom: none; 
 }
@@ -190,12 +190,12 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    border-right: 1px solid #616161;
+    border-right: 1px solid gray;
     flex-grow: 1;
 }
 
 .week__day__hour{
-    border-top: 1px solid #616161;
+    border-top: 1px solid gray;
     height: 60px; 
 }
   
