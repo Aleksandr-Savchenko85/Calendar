@@ -10,58 +10,359 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
         integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 
-<body class="page">
-    <header class="header">
-        <button class="button create-event-btn"><i class="fas fa-plus create-event-btn__icon"></i>Create</button>
-        <div class="navigation">
-            <button data-direction="today" class="navigation__today-btn button">Today</button>
-            <button data-direction="prev" class="icon-button navigation__nav-icon">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <button data-direction="next" class="icon-button navigation__nav-icon">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-            <span class="navigation__displayed-month">Jun - Jul 2019</span>
-        </div>
-    </header>
-    <section class="calendar">
-        <header class="calendar__header"></header>
-        <div class="calendar__body">
-            <div class="calendar__week-container">
-                <div class="calendar__time-scale"></div>
-                <div class="calendar__week"></div>
-            </div>
-        </div>
-    </section>
-    <div class="modal hidden overlay">
-        <div class="modal__content">
-            <div class="create-event">
-                <button class="create-event__close-btn">+</button>
-                <form class="event-form">
-                    <input type="text" name="title" placeholder="Title" class="event-form__field" />
-                    <div class="event-form__time">
-                        <input type="date" name="date" class="event-form__field" />
-                        <input type="time" name="startTime" class="event-form__field" />
-                        <span>-</span>
-                        <input type="time" name="endTime" class="event-form__field" />
+<body>
+    <div id="root">
+        <div class="calendar">
+            <div class="header">
+                <div class="header-navigation">
+                    <button class="create-btn">
+                        <span class="create-btn-text"><i class="fas fa-plus create-event-btn__icon"></i>Create</span>
+                    </button>
+                    <button class="today-btn">
+                        <span class="today-btn-text">Today</span>
+                    </button>
+                    <button class="prev-btn"><</button>
+                    <button class="next-btn">></button>
+                    <span class="text-month">September 2020</span>
+                </div>
+                <div class="header-main">
+                    <div class="header-main__gtm-table">
+                        <span class="header-main__gtm-table__text">GTM+ 3</span>
                     </div>
-                    <textarea name="description" placeholder="Description" class="event-form__field"></textarea>
-                    <button type="submit" class="event-form__submit-btn">Create</button>
-                </form>
+               
+                    <ul class="header-main__week">
+                        <li class="header-main__week__day">
+                            <span class="header-main__week__day-name">Mon</span>    
+                            <span class="header-main__week__day-date">01</span>    
+
+                        </li>
+                        <li class="header-main__week__day">
+                            <span class="header-main__week__day-name">Tue</span>    
+                            <span class="header-main__week__day-date">02</span>  
+                        </li>
+                        <li class="header-main__week__day">
+                            <span class="header-main__week__day-name">Wed</span>    
+                            <span class="header-main__week__day-date">03</span>  
+                        </li>
+                        <li class="header-main__week__day">
+                            <span class="header-main__week__day-name">Thu</span>    
+                            <span class="header-main__week__day-date">04</span>  
+                        </li>
+                        <li class="header-main__week__day">
+                            <span class="header-main__week__day-name">Fri</span>    
+                            <span class="header-main__week__day-date">05</span>  
+                        </li>
+                        <li class="header-main__week__day">
+                            <span class="header-main__week__day-name">Sat</span>    
+                            <span class="header-main__week__day-date">06</span>  
+                        </li>
+                        <li class="header-main__week__day">
+                            <span class="header-main__week__day-name">Sun</span>    
+                            <span class="header-main__week__day-date">07</span>  
+                        </li>
+                    </ul>
+                </div>
+
+
+
+            </div>
+
+
+            <div class="main-board">
+                <div class="time-hours">
+                    <div class="time-hours__hour">
+                        <span class="time-hours__hour__text">01:00</span>
+                    </div>
+                    <div class="time-hours__hour">
+                        <span class="time-hours__hour__text">02:00</span>
+                    </div>
+                    <div class="time-hours__hour">
+                        <span class="time-hours__hour__text">03:00</span>
+                    </div>
+                    <div class="time-hours__hour">
+                        <span class="time-hours__hour__text">04:00</span>
+                    </div>
+                    <div class="time-hours__hour">
+                        <span class="time-hours__hour__text">05:00</span>
+                    </div>
+                    <div class="time-hours__hour">
+                        <span class="time-hours__hour__text">06:00</span>
+                    </div>
+                    <div class="time-hours__hour">
+                        <span class="time-hours__hour__text">07:00</span>
+                    </div>
+                    <div class="time-hours__hour">
+                        <span class="time-hours__hour__text">08:00</span>
+                    </div>
+                    <div class="time-hours__hour">
+                        <span class="time-hours__hour__text">09:00</span>
+                    </div>
+                    <div class="time-hours__hour">
+                        <span class="time-hours__hour__text">10:00</span>
+                    </div>
+                    <div class="time-hours__hour">
+                        <span class="time-hours__hour__text">11:00</span>
+                    </div>
+                    <div class="time-hours__hour">
+                        <span class="time-hours__hour__text">12:00</span>
+                    </div>
+                    <div class="time-hours__hour">
+                        <span class="time-hours__hour__text">13:00</span>
+                    </div>
+                    <div class="time-hours__hour">
+                        <span class="time-hours__hour__text">14:00</span>
+                    </div>
+                    <div class="time-hours__hour">
+                        <span class="time-hours__hour__text">15:00</span>
+                    </div>
+                    <div class="time-hours__hour">
+                        <span class="time-hours__hour__text">16:00</span>
+                    </div>
+                    <div class="time-hours__hour">
+                        <span class="time-hours__hour__text">17:00</span>
+                    </div>
+                    <div class="time-hours__hour">
+                        <span class="time-hours__hour__text">18:00</span>
+                    </div>
+                    <div class="time-hours__hour">
+                        <span class="time-hours__hour__text">19:00</span>
+                    </div>
+                    <div class="time-hours__hour">
+                        <span class="time-hours__hour__text">20:00</span>
+                    </div>
+                    <div class="time-hours__hour">
+                        <span class="time-hours__hour__text">21:00</span>
+                    </div>
+                    <div class="time-hours__hour">
+                        <span class="time-hours__hour__text">22:00</span>
+                    </div>
+                    <div class="time-hours__hour">
+                        <span class="time-hours__hour__text">23:00</span>
+                    </div>
+                </div>
+                <div class="lines">
+                    <div class="lines__line"></div>
+                    <div class="lines__line"></div>
+                    <div class="lines__line"></div>
+                    <div class="lines__line"></div>
+                    <div class="lines__line"></div>
+                    <div class="lines__line"></div>
+                    <div class="lines__line"></div>
+                    <div class="lines__line"></div>
+                    <div class="lines__line"></div>
+                    <div class="lines__line"></div>
+                    <div class="lines__line"></div>
+                    <div class="lines__line"></div>
+                    <div class="lines__line"></div>
+                    <div class="lines__line"></div>
+                    <div class="lines__line"></div>
+                    <div class="lines__line"></div>
+                    <div class="lines__line"></div>
+                    <div class="lines__line"></div>
+                    <div class="lines__line"></div>
+                    <div class="lines__line"></div>
+                    <div class="lines__line"></div>
+                    <div class="lines__line"></div>
+                    <div class="lines__line"></div>
+                </div>
+                <div class="week">
+                    
+                    <div class="week__day">
+                        <div id="1" class="week__day__hour"></div>
+                        <div id="2" class="week__day__hour"></div>
+                        <div id="3" class="week__day__hour"></div>
+                        <div id="4" class="week__day__hour"></div>
+                        <div id="5" class="week__day__hour"></div>
+                        <div id="6" class="week__day__hour"></div>
+                        <div id="7" class="week__day__hour"></div>
+                        <div id="8" class="week__day__hour"></div>
+                        <div id="9" class="week__day__hour"></div>
+                        <div id="10" class="week__day__hour"></div>
+                        <div id="11" class="week__day__hour"></div>
+                        <div id="12" class="week__day__hour"></div>
+                        <div id="13" class="week__day__hour"></div>
+                        <div id="14" class="week__day__hour"></div>
+                        <div id="15" class="week__day__hour"></div>
+                        <div id="16" class="week__day__hour"></div>
+                        <div id="17" class="week__day__hour"></div>
+                        <div id="18" class="week__day__hour"></div>
+                        <div id="19" class="week__day__hour"></div>
+                        <div id="20" class="week__day__hour"></div>
+                        <div id="21" class="week__day__hour"></div>
+                        <div id="22" class="week__day__hour"></div>
+                        <div id="23" class="week__day__hour"></div>
+                        <div id="24" class="week__day__hour"></div>
+                    </div>
+                    <div class="week__day">
+                        <div id="1" class="week__day__hour"></div>
+                        <div id="2" class="week__day__hour"></div>
+                        <div id="3" class="week__day__hour"></div>
+                        <div id="4" class="week__day__hour"></div>
+                        <div id="5" class="week__day__hour"></div>
+                        <div id="6" class="week__day__hour"></div>
+                        <div id="7" class="week__day__hour"></div>
+                        <div id="8" class="week__day__hour"></div>
+                        <div id="9" class="week__day__hour"></div>
+                        <div id="10" class="week__day__hour"></div>
+                        <div id="11" class="week__day__hour"></div>
+                        <div id="12" class="week__day__hour"></div>
+                        <div id="13" class="week__day__hour"></div>
+                        <div id="14" class="week__day__hour"></div>
+                        <div id="15" class="week__day__hour"></div>
+                        <div id="16" class="week__day__hour"></div>
+                        <div id="17" class="week__day__hour"></div>
+                        <div id="18" class="week__day__hour"></div>
+                        <div id="19" class="week__day__hour"></div>
+                        <div id="20" class="week__day__hour"></div>
+                        <div id="21" class="week__day__hour"></div>
+                        <div id="22" class="week__day__hour"></div>
+                        <div id="23" class="week__day__hour"></div>
+                        <div id="24" class="week__day__hour"></div>
+                    </div>
+                    <div class="week__day">
+                        <div id="1" class="week__day__hour"></div>
+                        <div id="2" class="week__day__hour"></div>
+                        <div id="3" class="week__day__hour"></div>
+                        <div id="4" class="week__day__hour"></div>
+                        <div id="5" class="week__day__hour"></div>
+                        <div id="6" class="week__day__hour"></div>
+                        <div id="7" class="week__day__hour"></div>
+                        <div id="8" class="week__day__hour"></div>
+                        <div id="9" class="week__day__hour"></div>
+                        <div id="10" class="week__day__hour"></div>
+                        <div id="11" class="week__day__hour"></div>
+                        <div id="12" class="week__day__hour"></div>
+                        <div id="13" class="week__day__hour"></div>
+                        <div id="14" class="week__day__hour"></div>
+                        <div id="15" class="week__day__hour"></div>
+                        <div id="16" class="week__day__hour"></div>
+                        <div id="17" class="week__day__hour"></div>
+                        <div id="18" class="week__day__hour"></div>
+                        <div id="19" class="week__day__hour"></div>
+                        <div id="20" class="week__day__hour"></div>
+                        <div id="21" class="week__day__hour"></div>
+                        <div id="22" class="week__day__hour"></div>
+                        <div id="23" class="week__day__hour"></div>
+                        <div id="24" class="week__day__hour"></div>
+                    </div>
+                    <div class="week__day">
+                        <div id="1" class="week__day__hour"></div>
+                        <div id="2" class="week__day__hour"></div>
+                        <div id="3" class="week__day__hour"></div>
+                        <div id="4" class="week__day__hour"></div>
+                        <div id="5" class="week__day__hour"></div>
+                        <div id="6" class="week__day__hour"></div>
+                        <div id="7" class="week__day__hour"></div>
+                        <div id="8" class="week__day__hour"></div>
+                        <div id="9" class="week__day__hour"></div>
+                        <div id="10" class="week__day__hour"></div>
+                        <div id="11" class="week__day__hour"></div>
+                        <div id="12" class="week__day__hour"></div>
+                        <div id="13" class="week__day__hour"></div>
+                        <div id="14" class="week__day__hour"></div>
+                        <div id="15" class="week__day__hour"></div>
+                        <div id="16" class="week__day__hour"></div>
+                        <div id="17" class="week__day__hour"></div>
+                        <div id="18" class="week__day__hour"></div>
+                        <div id="19" class="week__day__hour"></div>
+                        <div id="20" class="week__day__hour"></div>
+                        <div id="21" class="week__day__hour"></div>
+                        <div id="22" class="week__day__hour"></div>
+                        <div id="23" class="week__day__hour"></div>
+                        <div id="24" class="week__day__hour"></div>
+                    </div>
+                    <div class="week__day">
+                        <div id="1" class="week__day__hour"></div>
+                        <div id="2" class="week__day__hour"></div>
+                        <div id="3" class="week__day__hour"></div>
+                        <div id="4" class="week__day__hour"></div>
+                        <div id="5" class="week__day__hour"></div>
+                        <div id="6" class="week__day__hour"></div>
+                        <div id="7" class="week__day__hour"></div>
+                        <div id="8" class="week__day__hour"></div>
+                        <div id="9" class="week__day__hour"></div>
+                        <div id="10" class="week__day__hour"></div>
+                        <div id="11" class="week__day__hour"></div>
+                        <div id="12" class="week__day__hour"></div>
+                        <div id="13" class="week__day__hour"></div>
+                        <div id="14" class="week__day__hour"></div>
+                        <div id="15" class="week__day__hour"></div>
+                        <div id="16" class="week__day__hour"></div>
+                        <div id="17" class="week__day__hour"></div>
+                        <div id="18" class="week__day__hour"></div>
+                        <div id="19" class="week__day__hour"></div>
+                        <div id="20" class="week__day__hour"></div>
+                        <div id="21" class="week__day__hour"></div>
+                        <div id="22" class="week__day__hour"></div>
+                        <div id="23" class="week__day__hour"></div>
+                        <div id="24" class="week__day__hour"></div>
+                    </div>
+                    <div class="week__day">
+                        <div id="1" class="week__day__hour"></div>
+                        <div id="2" class="week__day__hour"></div>
+                        <div id="3" class="week__day__hour"></div>
+                        <div id="4" class="week__day__hour"></div>
+                        <div id="5" class="week__day__hour"></div>
+                        <div id="6" class="week__day__hour"></div>
+                        <div id="7" class="week__day__hour"></div>
+                        <div id="8" class="week__day__hour"></div>
+                        <div id="9" class="week__day__hour"></div>
+                        <div id="10" class="week__day__hour"></div>
+                        <div id="11" class="week__day__hour"></div>
+                        <div id="12" class="week__day__hour"></div>
+                        <div id="13" class="week__day__hour"></div>
+                        <div id="14" class="week__day__hour"></div>
+                        <div id="15" class="week__day__hour"></div>
+                        <div id="16" class="week__day__hour"></div>
+                        <div id="17" class="week__day__hour"></div>
+                        <div id="18" class="week__day__hour"></div>
+                        <div id="19" class="week__day__hour"></div>
+                        <div id="20" class="week__day__hour"></div>
+                        <div id="21" class="week__day__hour"></div>
+                        <div id="22" class="week__day__hour"></div>
+                        <div id="23" class="week__day__hour"></div>
+                        <div id="24" class="week__day__hour"></div>
+                    </div>
+                    <div class="week__day">
+                        <div id="1" class="week__day__hour"></div>
+                        <div id="2" class="week__day__hour"></div>
+                        <div id="3" class="week__day__hour"></div>
+                        <div id="4" class="week__day__hour"></div>
+                        <div id="5" class="week__day__hour"></div>
+                        <div id="6" class="week__day__hour"></div>
+                        <div id="7" class="week__day__hour"></div>
+                        <div id="8" class="week__day__hour"></div>
+                        <div id="9" class="week__day__hour"></div>
+                        <div id="10" class="week__day__hour"></div>
+                        <div id="11" class="week__day__hour"></div>
+                        <div id="12" class="week__day__hour"></div>
+                        <div id="13" class="week__day__hour"></div>
+                        <div id="14" class="week__day__hour"></div>
+                        <div id="15" class="week__day__hour"></div>
+                        <div id="16" class="week__day__hour"></div>
+                        <div id="17" class="week__day__hour"></div>
+                        <div id="18" class="week__day__hour"></div>
+                        <div id="19" class="week__day__hour"></div>
+                        <div id="20" class="week__day__hour"></div>
+                        <div id="21" class="week__day__hour"></div>
+                        <div id="22" class="week__day__hour"></div>
+                        <div id="23" class="week__day__hour"></div>
+                        <div id="24" class="week__day__hour"></div>
+                    </div>
+                    
+                </div>
             </div>
         </div>
+
     </div>
-    <div class="popup hidden overlay">
-        <div class="popup__overlay"></div>
-        <div class="popup__content">
-            <button class="delete-event-btn">Delete</button>
-        </div>
-        </div>
-    </div>
-    <script src="scripts/index.js" type="module"></script>
+
+
+
+
+
 </body>
 
 </html>
