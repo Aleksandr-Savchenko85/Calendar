@@ -1,13 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.scss';
-import App from './App.jsx';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import "./index.scss";
 
+const rootElement = document.querySelector("#root");
 
-
-const rootElement = document.querySelector('#root');
-
-
-
-
-ReactDOM.render(<App/>, rootElement)
+ReactDOM.render(<App />, rootElement);
