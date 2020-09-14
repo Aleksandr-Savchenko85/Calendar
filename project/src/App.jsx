@@ -9,6 +9,9 @@ class App extends React.Component {
     currentDate: moment(),
 
   }
+  
+
+
 
   
 
@@ -25,6 +28,9 @@ class App extends React.Component {
 
 
 };
+export let showToday = ()=>{
+  alert(new Date)
+}
 
 export default App;
 

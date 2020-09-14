@@ -1,5 +1,5 @@
 import React from "react";
-import {goPrev, goNext} from '../App'
+
 
 
 const ButtonsNavigation = () => {
