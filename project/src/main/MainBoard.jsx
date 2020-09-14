@@ -9,8 +9,6 @@ const MainBoard = () => {
             <TimeHours />
             <Lines />
             <Week />
-
-
         </div>
 
     )

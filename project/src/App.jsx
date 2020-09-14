@@ -9,11 +9,7 @@ class App extends React.Component {
     currentDate: moment(),
 
   }
-  
-
-
-
-  
+   
 
   render() {
     return (
