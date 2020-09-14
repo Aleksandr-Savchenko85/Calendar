@@ -1,7 +1,7 @@
 import React from "react";
-import MainBoard from './main/MainBoard';
-import HeaderMain from './header/HeaderMain';
-import Week from './main/Week';
+import MainBoard from './Main/MainBoard';
+import HeaderMain from './Header/HeaderMain';
+import Week from './Main/Week';
 import moment from 'moment';
 
 class App extends React.Component {

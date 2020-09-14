@@ -1,14 +1,14 @@
 import React from 'react'
 
 const Day = () => {
-    let arrHour = [];
+    let arrDay = [];
     for (let i = 0; i <= 24; i++) {
-        arrHour.push(<div id="1" className="week__day__hour" key={i}></div>)
+        arrDay.push(<div id="1" className="week__day__hour" key={i}></div>)
 
     }
 
     return (
-        arrHour
+        arrDay
 
     )
 };
