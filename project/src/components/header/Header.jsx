@@ -5,6 +5,7 @@ import { months } from '../../utils/dateUtils.js';
 import './header.scss';
 
 const Header = () => {
+    
     return (
         <header className="header">
             <button className="button create-event-btn">

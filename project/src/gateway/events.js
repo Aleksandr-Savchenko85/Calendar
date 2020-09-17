@@ -1,5 +1,5 @@
 const events = [
-    {
+    /* {
         id: 1,
         title: 'Go to the gym',
         description: 'some text here',
@@ -26,7 +26,7 @@ const events = [
         description: 'at the cafe',
         dateFrom: new Date(2020, 8, 25, 10, 30),
         dateTo: new Date(2020, 8, 25, 11, 0),
-    }
+    } */
 ]
 
 export default events;

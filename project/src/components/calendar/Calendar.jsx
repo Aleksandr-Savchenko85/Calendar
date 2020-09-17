@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component, useState} from 'react';
 
 import Navigation from './../navigation/Navigation';
 import Week from '../week/Week';
@@ -7,7 +7,8 @@ import events from '../../gateway/events';
 
 import './calendar.scss';
 
-class Calendar extends Component {
+
+ class Calendar extends Component {
 
     state = {
         events,
@@ -28,6 +29,6 @@ class Calendar extends Component {
             </section>
         )
     }
-}
+} 
 
 export default Calendar;
