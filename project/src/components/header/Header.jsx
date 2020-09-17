@@ -1,10 +1,8 @@
 import React from 'react';
-
 import { months } from '../../utils/dateUtils.js';
-
 import './header.scss';
 
-const Header = () => {
+const Header = (props) => {
     
     return (
         <header className="header">
@@ -18,7 +16,7 @@ const Header = () => {
                 <button className="icon-button navigation__nav-icon">
                     <i className="fas fa-chevron-left"></i>
                 </button>
-                <button className="icon-button navigation__nav-icon">
+                <button className="icon-button navigation__nav-icon" onClick={props.nextWeek}>
                     <i className="fas fa-chevron-right"></i>
                 </button>
                 <span className="navigation__displayed-month">September-November</span>
