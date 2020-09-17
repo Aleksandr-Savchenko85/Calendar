@@ -7,7 +7,7 @@ import events from '../../gateway/events';
 import './calendar.scss';
 
 
-class Calendar extends Component {
+ class Calendar extends Component {
 
     state = {
         events,
@@ -30,18 +30,20 @@ class Calendar extends Component {
     }
 }
 
-export default Calendar;
-/* 
-const Calendar = () => {
-    const [weekDates, setWeekDates] = useState(events)
+export default Calendar; 
+ 
+/* const Calendar = () => {
+    const [weekDates, setWeekDates] = useState(events);
+
     return (
 
         <section className="calendar">
-            <Navigation weekDates={weekDates} />
+            <Navigation weekDates={weekDates}/>
+            
             <div className="calendar__body">
                 <div className="calendar__week-container">
                     <Sidebar />
-                    <Week weekDates={weekDates} events={events} />
+                    <Week weekDates={weekDates} events={events}/>
 
 
                 </div>
@@ -52,4 +54,5 @@ const Calendar = () => {
 
 
 }
-export default Calendar; */
+export default Calendar; 
+ */
