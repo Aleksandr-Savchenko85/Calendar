@@ -1,35 +1,26 @@
-import React from "react";
-import MainBoard from './Main/MainBoard';
-import HeaderMain from './Header/HeaderMain';
-import Week from './Main/Week';
-import moment from 'moment';
+import React, { Component } from 'react';
+import Header from './components/header/Header.jsx';
+import Calendar from './components/calendar/Calendar.jsx';
 
-class App extends React.Component {
-  state = {
-    currentDate: moment(),
+import { getWeekStartDate, generateWeekRange } from '../src/utils/dateUtils.js';
 
-  }
-   
+import './common.scss';
 
-  render() {
-    return (
-      <div className="calendar">
-        <HeaderMain />
-        <MainBoard />
-      </div>
+class App extends Component {
 
+    state = {
+        weekStartDate: new Date(),
+    }
 
-    )
-  }
+    render() {
+        const { weekStartDate } = this.state;
+        const weekDates = generateWeekRange(getWeekStartDate(weekStartDate));
 
-
+        return (<>
+            <Header />
+            <Calendar weekDates={weekDates} />
+        </>)
+    }
 };
-export let showToday = ()=>{
-  alert(new Date)
-}
 
 export default App;
-
-
-
-
