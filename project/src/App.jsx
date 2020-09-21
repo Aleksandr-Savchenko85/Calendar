@@ -14,7 +14,6 @@ const App = () => {
     return (
         <>
             <Header />
-            <Modal/>
             <Calendar weekDates={weekDates} />
         </>
     )
