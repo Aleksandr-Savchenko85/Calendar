@@ -14,10 +14,10 @@ const Header = () => {
                 <button className="navigation__today-btn button" >
                     Today
                 </button>
-                <button className="icon-button navigation__nav-icon" onClick={()=>setWeekStartDate(alert(weekStartDate))}>
+                <button className="icon-button navigation__nav-icon" onClick={()=>setWeekStartDate(weekStartDate + 7)}>
                     <i className="fas fa-chevron-left"></i>
                 </button>
-                <button className="icon-button navigation__nav-icon"onClick={()=>setWeekStartDate(alert(weekStartDate))}>
+                <button className="icon-button navigation__nav-icon"onClick={()=>setWeekStartDate(weekStartDate)}>
                     <i className="fas fa-chevron-right"></i>
                 </button>
                 <span className="navigation__displayed-month">September</span>
