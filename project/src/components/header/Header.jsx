@@ -1,10 +1,10 @@
 import React from 'react';
 import { months } from '../../utils/dateUtils.js';
 import './header.scss';
-import {goNext, goPrev} from '../../App'
+import { weekStartDate, setWeekStartDate} from '../../App'
 
-const Header = (props) => {
-    
+const Header = () => {
+
     return (
         <header className="header">
             <button className="button create-event-btn">
@@ -14,10 +14,10 @@ const Header = (props) => {
                 <button className="navigation__today-btn button" >
                     Today
                 </button>
-                <button className="icon-button navigation__nav-icon" onClick={props.goPrev}>
+                <button className="icon-button navigation__nav-icon" onClick={()=>setWeekStartDate(alert(weekStartDate))}>
                     <i className="fas fa-chevron-left"></i>
                 </button>
-                <button className="icon-button navigation__nav-icon" onClick={props.goNext}>
+                <button className="icon-button navigation__nav-icon"onClick={()=>setWeekStartDate(alert(weekStartDate))}>
                     <i className="fas fa-chevron-right"></i>
                 </button>
                 <span className="navigation__displayed-month">September</span>
