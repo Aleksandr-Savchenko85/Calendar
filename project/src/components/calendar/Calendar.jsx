@@ -11,6 +11,7 @@ import Modal from '../modal/Modal';
 const Calendar = ({ weekDates }) => {
     const [events, setEvents] = useState(weekDates)
 
+//console.log(events)
 //console.log(weekDates)
 
 
