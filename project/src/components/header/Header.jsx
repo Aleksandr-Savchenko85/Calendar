@@ -1,24 +1,26 @@
 import React, { useState } from 'react';
 
-import { months } from '../../utils/dateUtils.js';
+import { months} from '../../utils/dateUtils.js';
 
 import './header.scss';
 
 
-const Header = ({weekDates}) => {
-    const [weekStartDate, setWeekStartDate] = useState(weekDates);
+const Header = () => {
+    
 
-    console.log(weekDates)
+    //console.log(months)
+   
+    
 
 
     return (
         <header className="header">
-            <button className="button create-event-btn">
+            <button className="button create-event-btn" onClick={() => console.log('Hello create new event')}>
                 <i className="fas fa-plus create-event-btn__icon"></i>
                 Create
             </button>
             <div className="navigation">
-                <button className="navigation__today-btn button" >
+                <button className="navigation__today-btn button" onClick={() => console.log('Hello go today')}>
                     Today
                 </button>
                 <button className="icon-button navigation__nav-icon" onClick={() => console.log('Hello go to prev')}>
@@ -28,7 +30,7 @@ const Header = ({weekDates}) => {
 
                     <i className="fas fa-chevron-right"></i>
                 </button>
-                <span className="navigation__displayed-month">September-November</span>
+                <span className="navigation__displayed-month">November</span>
             </div>
         </header>
     )
