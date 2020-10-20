@@ -8,12 +8,16 @@ import './header.scss';
 const Header = () => {
 
 
-    const [weekdays, setWeekDays] = useState()
+    const [weekdays, setWeekDays] = useState(month)
 
 
     let date = new Date();
+
+    let numberOfWeek = date.getDate();
     let month = date.getMonth();
-    //console.log(months[month])
+
+
+    console.log(numberOfWeek)
 
 
 
@@ -29,7 +33,7 @@ const Header = () => {
                 <button className="navigation__today-btn button" onClick={() => console.log('Hello go today')}>
                     Today
                 </button>
-                <button className="icon-button navigation__nav-icon" onClick={() => setWeekDays(weekdays + "," + 'Week')}>
+                <button className="icon-button navigation__nav-icon" onClick={() => setWeekDays(weekdays + 7)}>
                     <i className="fas fa-chevron-left"></i>
                 </button>
                 <button className="icon-button navigation__nav-icon" onClick={() => console.log('Hello go to next')}>
