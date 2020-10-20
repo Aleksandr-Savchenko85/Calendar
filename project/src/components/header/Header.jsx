@@ -1,16 +1,22 @@
 import React, { useState } from 'react';
 
-import { months} from '../../utils/dateUtils.js';
+import { months } from '../../utils/dateUtils.js';
 
 import './header.scss';
 
 
 const Header = () => {
-    
 
-    //console.log(months)
-   
-    
+
+    const [weekdays, setWeekDays] = useState()
+
+
+    let date = new Date();
+    let month = date.getMonth();
+    //console.log(months[month])
+
+
+
 
 
     return (
@@ -23,14 +29,14 @@ const Header = () => {
                 <button className="navigation__today-btn button" onClick={() => console.log('Hello go today')}>
                     Today
                 </button>
-                <button className="icon-button navigation__nav-icon" onClick={() => console.log('Hello go to prev')}>
+                <button className="icon-button navigation__nav-icon" onClick={() => setWeekDays(weekdays + "," + 'Week')}>
                     <i className="fas fa-chevron-left"></i>
                 </button>
                 <button className="icon-button navigation__nav-icon" onClick={() => console.log('Hello go to next')}>
 
                     <i className="fas fa-chevron-right"></i>
                 </button>
-                <span className="navigation__displayed-month">November</span>
+                <span className="navigation__displayed-month">{months[month]}</span>
             </div>
         </header>
     )

@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { days } from '../../utils/dateUtils.js';
+import moment from 'moment';
 
-const Navigation = ({ weekDates }) => {
+ const Navigation = ({ weekDates }) => {
 
-
-   
-
+    
+    
     return (
         <header className="calendar__header">
             {weekDates.map(dayDate =>
@@ -13,9 +13,15 @@ const Navigation = ({ weekDates }) => {
                     <span className="day-label__day-name">{days[dayDate.getDay()]}</span>
                     <span className="day-label__day-number">{dayDate.getDate()}</span>
                 </div>
+
+                
             )}
         </header>
     )
-}
+
+} 
+
+
+
 
 export default Navigation;

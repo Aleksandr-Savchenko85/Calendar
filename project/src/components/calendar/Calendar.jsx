@@ -1,4 +1,4 @@
-import React, { Com } from 'react';
+import React, { useState } from 'react';
 
 import Navigation from './../navigation/Navigation';
 import Week from '../week/Week';
@@ -10,9 +10,9 @@ import './calendar.scss';
 
 
 const Calendar = ({ weekDates }) => {
-    //const [events, setEvents] = useState(weekDates)
-//console.log(events)
-//console.log(weekDates)
+    const [events, setEvents] = useState(weekDates)
+   //console.log(events)
+   //console.log(weekDates)
 
 
 
