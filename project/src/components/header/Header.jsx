@@ -17,7 +17,8 @@ const Header = () => {
     let month = date.getMonth();
 
 
-    console.log(numberOfWeek)
+    //console.log(numberOfWeek)
+    //console.log(month)
 
 
 
