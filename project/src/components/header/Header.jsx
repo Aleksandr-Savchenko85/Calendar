@@ -1,28 +1,26 @@
 import React, { useState } from 'react';
-
+import generateWeekRange from '../../utils/dateUtils.js';
 import { months } from '../../utils/dateUtils.js';
 
 import './header.scss';
 
 
-const Header = () => {
+const Header = ({ weekDates }) => {
+
+    const [week, setWeek] = useState(nextDayWeek)
 
 
-    const [weekdays, setWeekDays] = useState(month)
+    let nextDayWeek = weekDates.map(dayDate => dayDate.getDate());
 
 
+
+    //console.log(nextDayWeek)
+    //console.log(weekStartDate)
     let date = new Date();
-
-    let numberOfWeek = date.getDate();
+    //let numberOfWeek = date.getDate();
     let month = date.getMonth();
-
-
     //console.log(numberOfWeek)
     //console.log(month)
-
-
-
-
 
     return (
         <header className="header">
@@ -34,7 +32,7 @@ const Header = () => {
                 <button className="navigation__today-btn button" onClick={() => console.log('Hello go today')}>
                     Today
                 </button>
-                <button className="icon-button navigation__nav-icon" onClick={() => setWeekDays(weekdays + 7)}>
+                <button className="icon-button navigation__nav-icon" onClick={() => setWeek(week)}>
                     <i className="fas fa-chevron-left"></i>
                 </button>
                 <button className="icon-button navigation__nav-icon" onClick={() => console.log('Hello go to next')}>

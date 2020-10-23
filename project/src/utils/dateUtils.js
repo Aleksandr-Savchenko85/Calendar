@@ -1,6 +1,6 @@
 export const getWeekStartDate = (date) => {
     const dateCopy = new Date(date);
-    //console.log(dateCopy)
+    //console.log(date)
     const dayOfWeek = dateCopy.getDay();
     const difference =
         dayOfWeek === 0 ?
@@ -27,6 +27,7 @@ export const generateWeekRange = (startDate) => {
         //console.log(result)
         result.push(new Date(base.setDate(base.getDate() + i)));
         //console.log(result)
+        //console.log(base)
 
     }
     return result;
