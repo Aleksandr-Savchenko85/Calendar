@@ -1,28 +1,42 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import Header from './components/header/Header.jsx';
 import Calendar from './components/calendar/Calendar.jsx';
-import { getWeekStartDate, generateWeekRange } from '../src/utils/dateUtils.js';
+import { getWeekStartDate, generateWeekRange, days } from '../src/utils/dateUtils.js';
 import './common.scss';
-import Modal from './components/modal/Modal.jsx';
+
 
 
 
 const App = () => {
 
-    const [weekStartDate, setWeekStartDate] = useState(new Date);
+    const [weekStartDate, setWeekStartDate] = useState(new Date());
 
-        const weekDates = generateWeekRange(getWeekStartDate(weekStartDate));
+    const weekDates = generateWeekRange(getWeekStartDate(weekStartDate));
 
-   
 
-    //console.log(weekStartDate);
-    //console.log(weekDates);
+
+
+
+let goPrev =()=>{
+    setWeekStartDate()
+    
+}
+
+
+    
+
+    //console.log(weekStartDate.getDate())
 
 
     return (
         <>
-            <Header weekDates={weekDates} weekStartDate={weekStartDate}/>
-            <Calendar weekDates={weekDates} weekStartDate={weekStartDate} />
+            <Header
+                goPrev={goPrev}
+                weekDates={weekDates}
+                weekStartDate={weekStartDate} />
+            <Calendar
+                weekDates={weekDates}
+                weekStartDate={weekStartDate} />
         </>
     )
 }

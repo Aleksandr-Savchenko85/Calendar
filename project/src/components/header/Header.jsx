@@ -1,26 +1,22 @@
 import React, { useState } from 'react';
 import generateWeekRange from '../../utils/dateUtils.js';
 import { months } from '../../utils/dateUtils.js';
+import addDays from '../../utils/dateUtils.js';
 
 import './header.scss';
 
 
-const Header = ({ weekDates }) => {
-
-    const [week, setWeek] = useState(nextDayWeek)
-
-
-    let nextDayWeek = weekDates.map(dayDate => dayDate.getDate());
-
-
-
-    //console.log(nextDayWeek)
-    //console.log(weekStartDate)
+const Header = ({ goPrev, weekDates}) => {
     let date = new Date();
-    //let numberOfWeek = date.getDate();
-    let month = date.getMonth();
-    //console.log(numberOfWeek)
-    //console.log(month)
+    let currentMonth = date.getMonth(); // current month
+    let nextMonthAfterCurrent = months[currentMonth + 1] // next month after current 
+
+
+    
+    let e = weekDates;
+
+    console.log(e)
+
 
     return (
         <header className="header">
@@ -32,14 +28,14 @@ const Header = ({ weekDates }) => {
                 <button className="navigation__today-btn button" onClick={() => console.log('Hello go today')}>
                     Today
                 </button>
-                <button className="icon-button navigation__nav-icon" onClick={() => setWeek(week)}>
+                <button className="icon-button navigation__nav-icon" onClick={goPrev} >
                     <i className="fas fa-chevron-left"></i>
                 </button>
                 <button className="icon-button navigation__nav-icon" onClick={() => console.log('Hello go to next')}>
 
                     <i className="fas fa-chevron-right"></i>
                 </button>
-                <span className="navigation__displayed-month">{months[month]}</span>
+                <span className="navigation__displayed-month">{months[currentMonth] + " - " +  nextMonthAfterCurrent}</span>
             </div>
         </header>
     )
