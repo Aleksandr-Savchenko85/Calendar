@@ -24,6 +24,8 @@ export function addDays(date, days) {
     return result;
 }
 
+//console.log(addDays(new Date(), 7))
+//console.log(addDays(new Date(), 7))
 
 
 export const generateWeekRange = (startDate) => {

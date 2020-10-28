@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
 import generateWeekRange from '../../utils/dateUtils.js';
 import { months } from '../../utils/dateUtils.js';
-import addDays from '../../utils/dateUtils.js';
 
 import './header.scss';
 
 
-const Header = ({ goPrev, weekDates}) => {
+const Header = ({ goPrev, goNext, toDay }) => {
+
+    const [addDays, setAddDays] = useState(new Date());
+
+
+    //console.log(weekStartDate)
     let date = new Date();
     let currentMonth = date.getMonth(); // current month
     let nextMonthAfterCurrent = months[currentMonth + 1] // next month after current 
+    //let nameMonthFirstDay = date.getMonth();
 
-
-    
-    let e = weekDates;
-
-    console.log(e)
 
 
     return (
@@ -25,17 +25,18 @@ const Header = ({ goPrev, weekDates}) => {
                 Create
             </button>
             <div className="navigation">
-                <button className="navigation__today-btn button" onClick={() => console.log('Hello go today')}>
+                <button className="navigation__today-btn button" onClick={toDay}>
                     Today
                 </button>
                 <button className="icon-button navigation__nav-icon" onClick={goPrev} >
                     <i className="fas fa-chevron-left"></i>
                 </button>
-                <button className="icon-button navigation__nav-icon" onClick={() => console.log('Hello go to next')}>
+                <button className="icon-button navigation__nav-icon" onClick={goNext}>
 
                     <i className="fas fa-chevron-right"></i>
                 </button>
-                <span className="navigation__displayed-month">{months[currentMonth] + " - " +  nextMonthAfterCurrent}</span>
+                <span className="navigation__displayed-month">
+                    {months[currentMonth] + " - " + nextMonthAfterCurrent}</span>
             </div>
         </header>
     )
