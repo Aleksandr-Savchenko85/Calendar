@@ -11,17 +11,16 @@ import './calendar.scss';
 
 const Calendar = ({ weekDates }) => {
     const [events, setEvents] = useState(weekDates)
-   //console.log(events)
-   //console.log(weekDates)
+    //console.log(events)
+    //console.log(weekDates)
 
 
 
 
     return (
-        <section className="calendar">
+        <section className="calendar" >
             <Navigation
                 weekDates={weekDates}
-        
             />
             <div className="calendar__body">
                 <div className="calendar__week-container">

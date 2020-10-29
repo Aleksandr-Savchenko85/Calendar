@@ -24,6 +24,11 @@ export function addDays(date, days) {
     return result;
 }
 
+
+export const currentDate = () => {
+    return new Date();
+}
+
 //console.log(addDays(new Date(), 7))
 //console.log(addDays(new Date(), 7))
 

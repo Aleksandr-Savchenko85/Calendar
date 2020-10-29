@@ -5,18 +5,16 @@ import { months } from '../../utils/dateUtils.js';
 import './header.scss';
 
 
-const Header = ({ goPrev, goNext, toDay }) => {
+const Header = ({ goPrev, goNext, toDay, weekDates }) => {
 
-    const [addDays, setAddDays] = useState(new Date());
-
-
-    //console.log(weekStartDate)
-    let date = new Date();
-    let currentMonth = date.getMonth(); // current month
-    let nextMonthAfterCurrent = months[currentMonth + 1] // next month after current 
-    //let nameMonthFirstDay = date.getMonth();
-
-
+    //console.log(weekDates)
+    let currentMonth = new Date().getMonth(); // current month
+    //console.log(months[currentMonth]) //October
+    //let nextMonthAfterCurrent = months[currentMonth + 1] // next month after current 
+    let nameMonthFirstDayOfWeek = months[weekDates[0].getMonth()];
+    //console.log(nameMonthFirstDayOfWeek)
+    let nameMonthLastDayOfWeek = months[weekDates[6].getMonth()];
+    //console.log(nameMonthLastDayOfWeek)
 
     return (
         <header className="header">
@@ -36,7 +34,10 @@ const Header = ({ goPrev, goNext, toDay }) => {
                     <i className="fas fa-chevron-right"></i>
                 </button>
                 <span className="navigation__displayed-month">
-                    {months[currentMonth] + " - " + nextMonthAfterCurrent}</span>
+
+                    {nameMonthFirstDayOfWeek === nameMonthLastDayOfWeek ? months[currentMonth + 1] : nameMonthFirstDayOfWeek + ' - ' + nameMonthLastDayOfWeek}
+
+                </span>
             </div>
         </header>
     )
