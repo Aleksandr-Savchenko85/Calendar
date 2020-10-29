@@ -10,6 +10,7 @@ import './common.scss';
 const App = () => {
 
     const [weekStartDate, setWeekStartDate] = useState(new Date());
+    const [isOpen, setIsOpen] = useState(false);
 
     const weekDates = generateWeekRange(getWeekStartDate(weekStartDate));
 
@@ -29,6 +30,10 @@ const App = () => {
         setWeekStartDate(currentDate())
     }
 
+    const showForm =()=>{
+        setIsOpen(isOpen(true))
+    }
+
     //console.log(weekStartDate.getDate())
     
     
@@ -37,6 +42,7 @@ const App = () => {
     return (
         <>
             <Header
+                showForm={showForm}
                 toDay={toDay}
                 goNext={goNext}
                 goPrev={goPrev}

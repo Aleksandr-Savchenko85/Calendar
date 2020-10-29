@@ -5,7 +5,7 @@ import { months } from '../../utils/dateUtils.js';
 import './header.scss';
 
 
-const Header = ({ goPrev, goNext, toDay, weekDates }) => {
+const Header = ({ goPrev, goNext, toDay, weekDates, showForm }) => {
 
     //console.log(weekDates)
     let currentMonth = new Date().getMonth(); // current month
@@ -18,7 +18,7 @@ const Header = ({ goPrev, goNext, toDay, weekDates }) => {
 
     return (
         <header className="header">
-            <button className="button create-event-btn" onClick={() => console.log('Hello create new event')}>
+            <button className="button create-event-btn" onClick={showForm}>
                 <i className="fas fa-plus create-event-btn__icon"></i>
                 Create
             </button>

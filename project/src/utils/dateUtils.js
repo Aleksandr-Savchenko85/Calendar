@@ -18,22 +18,22 @@ export const getWeekStartDate = (date) => {
 
 }
 
-export function addDays(date, days) {
+export function addDays(date, days) { //function adding days in a week
     let result = new Date(date);
     result.setDate(result.getDate() + days)
     return result;
 }
 
 
-export const currentDate = () => {
+export const currentDate = () => { // function current date
     return new Date();
 }
 
 //console.log(addDays(new Date(), 7))
-//console.log(addDays(new Date(), 7))
 
 
-export const generateWeekRange = (startDate) => {
+
+export const generateWeekRange = (startDate) => { // function generating weekly range
     const result = [];
     for (let i = 0; i < 7; i += 1) {
         const base = new Date(startDate);
@@ -58,7 +58,7 @@ export const getDateTime = (date, time) => {
     return withMinutes;
 }
 
-export const formatMins = (mins) => {
+export const formatMins = (mins) => { // function format time for sidebar
     return mins < 10 ? `0${mins}` : mins;
 }
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import Model from '..//.//modal/Modal';
 import Navigation from './../navigation/Navigation';
 import Week from '../week/Week';
 import Sidebar from '../sidebar/Sidebar';
@@ -10,7 +10,8 @@ import './calendar.scss';
 
 
 const Calendar = ({ weekDates }) => {
-    const [events, setEvents] = useState(weekDates)
+
+    const [isOpen, setEvents] = useState(weekDates)
     //console.log(events)
     //console.log(weekDates)
 
@@ -26,6 +27,7 @@ const Calendar = ({ weekDates }) => {
                 <div className="calendar__week-container">
                     <Sidebar />
                     <Week weekDates={weekDates} events={events} />
+                  {/*   <Model/> */}
                 </div>
             </div>
         </section>
