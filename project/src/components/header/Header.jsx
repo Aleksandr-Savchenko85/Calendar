@@ -9,7 +9,7 @@ const Header = ({ goPrev, goNext, toDay, weekDates, showForm }) => {
 
     //console.log(weekDates)
     let currentMonth = new Date().getMonth(); // current month
-    //console.log(months[currentMonth]) //October
+    //console.log(months[currentMonth+1]) //October
     //let nextMonthAfterCurrent = months[currentMonth + 1] // next month after current 
     let nameMonthFirstDayOfWeek = months[weekDates[0].getMonth()];
     //console.log(nameMonthFirstDayOfWeek)
@@ -35,7 +35,9 @@ const Header = ({ goPrev, goNext, toDay, weekDates, showForm }) => {
                 </button>
                 <span className="navigation__displayed-month">
 
-                    {nameMonthFirstDayOfWeek === nameMonthLastDayOfWeek ? months[currentMonth + 1] : nameMonthFirstDayOfWeek + ' - ' + nameMonthLastDayOfWeek}
+                    {nameMonthFirstDayOfWeek === nameMonthLastDayOfWeek
+                        ? nameMonthFirstDayOfWeek
+                        : nameMonthFirstDayOfWeek + ' - ' + nameMonthLastDayOfWeek}
 
                 </span>
             </div>
@@ -44,3 +46,14 @@ const Header = ({ goPrev, goNext, toDay, weekDates, showForm }) => {
 }
 
 export default Header;
+
+
+
+/* background-color: red; // style for active currend date
+color: white;
+width: 50px;
+align-items: center;
+justify-content: center;
+display: flex;
+height: 50px;
+border-radius: 30px; */

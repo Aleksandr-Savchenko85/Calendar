@@ -2,49 +2,40 @@
     display: flex;
     flex-direction: column;
     height: calc(100vh - 60px);
-    background-color:cornsilk;
-    
-
+    background-color: cornsilk;
     &__header {
         display: flex;
         height: 100px;
         padding-left: 48px;
-        background-color:cornsilk;
+        background-color: cornsilk;
     }
-
     &__body {
         display: flex;
         overflow: auto;
     }
-
     &__week-container {
         display: flex;
         width: 100%;
         height: fit-content;
     }
-
     &__time-scale {
         height: 100%;
         width: 48px;
     }
-
     &__week {
         display: flex;
         flex: 1;
     }
-
     &__day {
         position: relative;
         flex: 1;
         border-left: 1px solid grey;
     }
-
     &__time-slot {
         height: 59px;
         position: relative;
         border-bottom: 1px solid gray;
     }
-
     &__day-label {
         flex: 1;
     }
@@ -56,21 +47,15 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-   
-
     &__day-name {
         font-size: 20px;
         text-transform: uppercase;
-        color:maroon;
+        color: maroon;
         font-weight: 900;
-        
-
     }
-
     &__day-number {
         font-size: 20px;
         font-weight: 800;
-        
     }
 }
 

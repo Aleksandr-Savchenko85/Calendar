@@ -11,7 +11,7 @@ import './calendar.scss';
 
 const Calendar = ({ weekDates }) => {
 
-    const [isOpen, setEvents] = useState(weekDates)
+    const [event, setEvents] = useState(weekDates)
     //console.log(events)
     //console.log(weekDates)
 
@@ -22,12 +22,14 @@ const Calendar = ({ weekDates }) => {
         <section className="calendar" >
             <Navigation
                 weekDates={weekDates}
+             
             />
             <div className="calendar__body">
                 <div className="calendar__week-container">
                     <Sidebar />
-                    <Week weekDates={weekDates} events={events} />
                   {/*   <Model/> */}
+                    <Week weekDates={weekDates} events={events} />
+                 
                 </div>
             </div>
         </section>

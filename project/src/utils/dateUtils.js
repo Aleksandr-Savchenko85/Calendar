@@ -25,8 +25,14 @@ export function addDays(date, days) { //function adding days in a week
 }
 
 
-export const currentDate = () => { // function current date
+export const currentDate = () => { // function that returns the current date
     return new Date();
+}
+
+
+export const showForm = () => {
+    return
+
 }
 
 //console.log(addDays(new Date(), 7))
