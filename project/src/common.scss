@@ -1,38 +1,36 @@
 .button {
     height: 40px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
+    width: 110px;
+    color: #fff;
+    border-radius: 24px;
     outline: none;
+    border: 2px solid red;
+    text-transform: uppercase;
+    padding: 8px;
+    background-image: linear-gradient(45deg, red, orange);
     cursor: pointer;
-    font-size: 16px;
-    font-weight: 500;
-    background: rgb(162, 214, 221);
+    transition: border-color .5s;
+    &:hover {
+        border-color: orange;
+    }
 }
 
-.button:hover{
-    background-color:cyan;
-   
+.icon-button:hover {
+    background-color: rgb(243, 227, 197);
 }
-.icon-button:hover{
-        background-color:rgb(243, 227, 197);
-      }
-
 
 .icon-button {
     outline: none;
     border: 1px solid gray;
     cursor: pointer;
     font-size: 20px;
-          
 }
-
 
 .modal {
     position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
-
     &__content {
         background: #fff;
         padding: 16px;
