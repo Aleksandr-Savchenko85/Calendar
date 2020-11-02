@@ -1,23 +1,33 @@
-import React, {useState } from 'react';
-
+import React, { useState } from 'react';
 import './modal.scss';
 
 
-  const Modal = ({handleChange}) => {
-     const[] = useState()
+const Modal = ({ handleChange, isOpen}) => {
+
+
+
+    console.log(isOpen)
+    
+    const [title, setTitle] = useState('title')
+    const [description, setDescription] = useState('Description')
+    const [timeStart, setTimeStart] = useState('')
+    const [timeFinish, setTimeFinish] = useState('')
 
     return (
         <div className="modal overlay">
+
             <div className="modal__content">
                 <div className="create-event">
                     <button className="create-event__close-btn">+</button>
                     <form className="event-form">
+
                         <input type="text"
                             name="title"
-                            placeholder="Title"
+                            placeholder={title}
                             className="event-form__field"
                         />
                         <div className="event-form__time">
+
                             <input type="date"
                                 name="date"
                                 className="event-form__field"
@@ -34,9 +44,10 @@ import './modal.scss';
                             />
                         </div>
                         <textarea name="description"
-                            placeholder="Description"
+                            placeholder=""
                             className="event-form__field">
                         </textarea>
+
                         <button type="submit" className="event-form__submit-btn">Create</button>
                     </form>
                 </div>
@@ -45,9 +56,11 @@ import './modal.scss';
 
     )
 }
-export default Modal; 
- 
 
 
 
-  
+export default Modal;
+
+
+
+

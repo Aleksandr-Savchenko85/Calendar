@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import generateWeekRange from '../../utils/dateUtils.js';
 import { months } from '../../utils/dateUtils.js';
-
+import Model from '..//modal/Modal.jsx';
 import './header.scss';
 
 
 const Header = ({ goPrev, goNext, toDay, weekDates, showForm }) => {
 
     //console.log(weekDates)
-    let currentMonth = new Date().getMonth(); // current month
+    //let currentMonth = new Date().getMonth(); // current month
     //console.log(months[currentMonth+1]) //October
     //let nextMonthAfterCurrent = months[currentMonth + 1] // next month after current 
     let nameMonthFirstDayOfWeek = months[weekDates[0].getMonth()];

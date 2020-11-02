@@ -30,10 +30,7 @@ export const currentDate = () => { // function that returns the current date
 }
 
 
-export const showForm = () => {
-    return
 
-}
 
 //console.log(addDays(new Date(), 7))
 

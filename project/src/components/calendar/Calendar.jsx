@@ -27,7 +27,7 @@ const Calendar = ({ weekDates }) => {
             <div className="calendar__body">
                 <div className="calendar__week-container">
                     <Sidebar />
-                  {/*   <Model/> */}
+                   {/*   <Model/> */}
                     <Week weekDates={weekDates} events={events} />
                  
                 </div>
