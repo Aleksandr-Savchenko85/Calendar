@@ -2,28 +2,30 @@ import React, { useState } from 'react';
 import './modal.scss';
 
 
-const Modal = ({ handleChange, isOpen}) => {
-
-
-
-    console.log(isOpen)
+const Modal = ({ handleChange, isOpen, hideForm}) => {
     
-    const [title, setTitle] = useState('title')
-    const [description, setDescription] = useState('Description')
-    const [timeStart, setTimeStart] = useState('')
-    const [timeFinish, setTimeFinish] = useState('')
+    //const [title, setTitle] = useState('')
+    //const [description, setDescription] = useState('')
+    //const [timeStart, setTimeStart] = useState('')
+    //const [timeFinish, setTimeFinish] = useState('')
+
+    //console.log(isOpen)
+
+    if (!isOpen) {
+        return null
+    }
+
 
     return (
         <div className="modal overlay">
 
             <div className="modal__content">
                 <div className="create-event">
-                    <button className="create-event__close-btn">+</button>
+                    <button className="create-event__close-btn" onClick={hideForm}>+</button>
                     <form className="event-form">
-
                         <input type="text"
                             name="title"
-                            placeholder={title}
+                            placeholder='title'
                             className="event-form__field"
                         />
                         <div className="event-form__time">
@@ -55,6 +57,9 @@ const Modal = ({ handleChange, isOpen}) => {
         </div>
 
     )
+
+
+
 }
 
 

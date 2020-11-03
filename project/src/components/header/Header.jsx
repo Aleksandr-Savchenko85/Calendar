@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import generateWeekRange from '../../utils/dateUtils.js';
 import { months } from '../../utils/dateUtils.js';
-import Model from '..//modal/Modal.jsx';
+import Modal from '..//modal/Modal.jsx';
 import './header.scss';
 
 
-const Header = ({ goPrev, goNext, toDay, weekDates, showForm }) => {
+const Header = ({ goPrev, goNext, toDay, weekDates, showForm}) => {
+    //console.log(isOpen)
+    //console.log(showForm)
 
+      
     //console.log(weekDates)
     //let currentMonth = new Date().getMonth(); // current month
     //console.log(months[currentMonth+1]) //October
@@ -17,11 +20,13 @@ const Header = ({ goPrev, goNext, toDay, weekDates, showForm }) => {
     //console.log(nameMonthLastDayOfWeek)
 
     return (
+
         <header className="header">
             <button className="button create-event-btn" onClick={showForm}>
                 <i className="fas fa-plus create-event-btn__icon"></i>
                 Create
             </button>
+
             <div className="navigation">
                 <button className="navigation__today-btn button" onClick={toDay}>
                     Today

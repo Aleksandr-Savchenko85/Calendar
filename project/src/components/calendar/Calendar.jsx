@@ -5,11 +5,12 @@ import Week from '../week/Week';
 import Sidebar from '../sidebar/Sidebar';
 import events from '../../gateway/events';
 import './calendar.scss';
+import Modal from '..//.//modal/Modal';
 
 
 
 
-const Calendar = ({ weekDates }) => {
+const Calendar = ({ weekDates}) => {
 
     const [event, setEvents] = useState(weekDates)
     //console.log(events)
@@ -17,23 +18,25 @@ const Calendar = ({ weekDates }) => {
 
 
 
-
     return (
         <section className="calendar" >
             <Navigation
                 weekDates={weekDates}
-             
+
             />
             <div className="calendar__body">
                 <div className="calendar__week-container">
                     <Sidebar />
-                   {/*   <Model/> */}
+                    
                     <Week weekDates={weekDates} events={events} />
-                 
+
                 </div>
             </div>
         </section>
     )
+
+
+
 }
 export default Calendar;
 
