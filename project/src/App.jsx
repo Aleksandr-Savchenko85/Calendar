@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Header from './components/header/Header.jsx';
 import Calendar from './components/calendar/Calendar.jsx';
-import { getWeekStartDate, generateWeekRange, days, addDays, currentDate, showForms } from '../src/utils/dateUtils.js';
+import { getWeekStartDate, generateWeekRange, addDays, currentDate } from '../src/utils/dateUtils.js';
 import './common.scss';
 import Modal from './components/modal/Modal.jsx';
 
@@ -11,40 +11,40 @@ const App = () => {
 
     const [weekStartDate, setWeekStartDate] = useState(new Date());
     const [isOpen, setIsOpen] = useState(false);
-    const [tasks, setTasks] = useState([]);
-
-
     const weekDates = generateWeekRange(getWeekStartDate(weekStartDate));
     //console.log(tasks)
     //console.log(weekDates)
 
+
+    
+
     const goPrev = () => {
         setWeekStartDate(addDays(weekStartDate, -7))
-    }
-    // console.log(weekStartDate)
+    };
+
 
 
     const goNext = () => {
         setWeekStartDate(addDays(weekStartDate, +7))
-    }
+    };
 
     const toDay = () => {
         setWeekStartDate(currentDate())
-    }
+    };
 
 
     const showForm = () => {
         setIsOpen(true)
 
+    };
 
-    }
-
-    const hideForm = () => [
+    const hideForm = () => {
         setIsOpen(false)
-    ]
+    };
 
-
-
+    /*  createTask = (value, event) =>{
+         event.preventDefault();
+     } */
 
 
     return (
@@ -58,8 +58,8 @@ const App = () => {
                 weekDates={weekDates}
                 weekStartDate={weekStartDate}
             />
+           
             <Modal
-
                 isOpen={isOpen}
                 hideForm={hideForm}
 
@@ -67,7 +67,6 @@ const App = () => {
 
 
             <Calendar
-
                 weekDates={weekDates}
                 weekStartDate={weekStartDate}
 

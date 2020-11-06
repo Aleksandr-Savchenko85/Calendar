@@ -1,5 +1,66 @@
-const events = [
-     {
+const baseUrl = 'https://5fa28679ba0736001613bc44.mockapi.io/Tasks/task';
+
+export const createNewTask = taskData => {
+    return fetch(baseUrl, {
+        method: "POST",
+        headers: {
+            "Content-type": "application/json"
+        },
+
+        body: JSON.stringify(taskData),
+    }).then(response => {
+        if (!response.ok) {
+            throw new Error("Failed to create new task")
+        }
+    })
+};
+
+export const getTask = () => {
+    return fetch(baseUrl)
+        .then(res => {
+            if (res.ok) {
+                return res.json();
+            }
+        }).then(tasksList => {
+            return tasksList.map(({ _id, ...task }) => ({
+                id: _id,
+                ...task
+            }));
+        })
+}
+
+export const deleteTask = (id) => {
+    return fetch(`${baseUrl}/${id}`, {
+
+    }).then(response => {
+        if (response.ok) {
+            throw new Error('Server Error!')
+        }
+    })
+}
+
+
+/* export const getTask = () => {
+    return fetch(baseUrl)
+        .then(response => {
+            if (response.ok) {
+                return response.json()
+
+
+
+            }
+            throw new Error("Failed to fetch task")
+        })
+} */
+
+
+/* export const deleteTask = id => {
+    return fetch(`${baseUrl}/${id}`)
+} */
+
+
+
+const events = [{
         id: 1,
         title: 'Go to the gym',
         description: 'some text here',
@@ -26,7 +87,7 @@ const events = [
         description: 'at the cafe',
         dateFrom: new Date(2020, 8, 25, 10, 30),
         dateTo: new Date(2020, 8, 25, 11, 0),
-    } 
+    }
 ]
 
 export default events;

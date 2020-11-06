@@ -1,12 +1,11 @@
 .event {
     position: absolute;
-    width: 80%;
+    width: 20%;
     background-color: cornflowerblue;
     z-index: 1;
     border-radius: 8px;
     padding: 8px;
     color: #fff;
-  
     &__title {
         width: 100%;
         overflow: hidden;
@@ -14,14 +13,13 @@
         white-space: nowrap;
         margin-bottom: 8px;
     }
-
     &:hover {
-      font-weight: bold;
-      background-color: red;
+        font-weight: bold;
+        background-color: red;
     }
-  }
-  
-  .delete-event-btn {
+}
+
+.delete-event-btn {
     cursor: pointer;
     border: none;
-  }
+}
