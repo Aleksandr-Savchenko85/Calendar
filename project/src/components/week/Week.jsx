@@ -7,7 +7,8 @@ import Event from '..//event/Event';
 
 const Week = ({ weekDates, events }) => {
     
-
+//console.log(weekDates)
+//console.log(events)
 
     return (
         <div className="calendar__week">

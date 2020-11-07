@@ -16,29 +16,30 @@ const App = () => {
     const [event, setEvent] = useState([]);
 
     const weekDates = generateWeekRange(getWeekStartDate(weekStartDate));
-    //console.log(tasks)
+    console.log(event)
     //console.log(weekDates)
 
-     useEffect(() => {
-       getTask().then(responce=>{
-           setEvent(responce)
-       })
+    useEffect(() => {
+        getTask().then(responce => {
+            setEvent(responce)
+        })
     }, [event.length]
     );
 
-     useEffect(() => {
-       getTask().then(responce=>{
-           setEvent(responce)
-       })
+    useEffect(() => {
+        getTask().then(responce => {
+            setEvent(responce)
+        })
     }, []
     );
 
-  
-    
-   
+    const refresh = () => {
+        getTask().then(responce => {
+            console.log(responce)
+        })
+    };
 
 
-    
 
     const goPrev = () => {
         setWeekStartDate(addDays(weekStartDate, -7))
@@ -64,15 +65,15 @@ const App = () => {
         setIsOpen(false)
     };
 
-    
+
 
 
     return (
 
         <>
-          
+
             <Header
-          
+
                 showForm={showForm}
                 toDay={toDay}
                 goNext={goNext}
@@ -80,11 +81,12 @@ const App = () => {
                 weekDates={weekDates}
                 weekStartDate={weekStartDate}
             />
-         
+
             <Modal
                 isOpen={isOpen}
                 hideForm={hideForm}
-
+                refresh={() =>  refresh()
+                }
             />
 
 

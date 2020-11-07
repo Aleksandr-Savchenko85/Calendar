@@ -2,7 +2,7 @@ import React from 'react';
 import events from '../../gateway/events';
 import './event.scss';
 
-console.log(events)
+//console.log(events)
 const Event = ({ height, marginTop, title, time, }) => {
   
     const eventStyle = {

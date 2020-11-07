@@ -3,8 +3,8 @@ import './modal.scss';
 import { createNewTask, getTask, } from '../../gateway/events';
 
 
-const Modal = ({ isOpen, hideForm }) => {
-
+const Modal = ({ isOpen, hideForm, refresh }) => {
+    
     const [task, setTask] = useState({
         title: '',
         date: '',
@@ -24,6 +24,7 @@ const Modal = ({ isOpen, hideForm }) => {
         event.preventDefault();
         createNewTask(task);
         clearInputs();
+        refresh();
         hideForm();
     };
 
@@ -37,7 +38,7 @@ const Modal = ({ isOpen, hideForm }) => {
 
 
 
-   //console.log(event)
+    //console.log(event)
 
     if (!isOpen) {
         return null
