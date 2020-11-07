@@ -93,7 +93,7 @@ const App = () => {
             <Calendar
                 weekDates={weekDates}
                 weekStartDate={weekStartDate}
-
+                events={event}
 
             />
         </>
