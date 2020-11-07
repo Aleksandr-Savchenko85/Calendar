@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import generateWeekRange from '../../utils/dateUtils.js';
 import { months } from '../../utils/dateUtils.js';
-import Modal from '..//modal/Modal.jsx';
 import './header.scss';
 
 

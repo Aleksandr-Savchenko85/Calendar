@@ -1,10 +1,10 @@
 import React from 'react';
-
+import events from '../../gateway/events';
 import './event.scss';
 
-
-const Event = ({ height, marginTop, title, time }) => {
-
+console.log(events)
+const Event = ({ height, marginTop, title, time, }) => {
+  
     const eventStyle = {
         height,
         marginTop

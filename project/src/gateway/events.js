@@ -17,20 +17,20 @@ export const createNewTask = taskData => {
 
 export const getTask = () => {
     return fetch(baseUrl)
-        .then(res => {
-            if (res.ok) {
-                return res.json();
+        .then(response => {
+            if (response.ok) {
+                return response.json();
             }
         }).then(tasksList => {
-            return tasksList.map(({ _id, ...task }) => ({
-                id: _id,
+            return tasksList.map(({ id, ...task }) => ({
+                id: id,
                 ...task
             }));
         })
 }
 
 export const deleteTask = (id) => {
-    return fetch(`${baseUrl}/${id}`, {
+    return fetch(`${baseUrl} ${id}`, {
 
     }).then(response => {
         if (response.ok) {
@@ -90,4 +90,6 @@ const events = [{
     }
 ]
 
+
+//console.log(events)
 export default events;
