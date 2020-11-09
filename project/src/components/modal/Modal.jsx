@@ -4,7 +4,7 @@ import { createNewTask, getTask, } from '../../gateway/events';
 
 
 const Modal = ({ isOpen, hideForm, refresh }) => {
-    
+
     const [task, setTask] = useState({
         title: '',
         date: '',
@@ -23,8 +23,8 @@ const Modal = ({ isOpen, hideForm, refresh }) => {
     const handleSubmit = () => {
         event.preventDefault();
         createNewTask(task);
-        clearInputs();
         refresh();
+        clearInputs();
         hideForm();
     };
 
@@ -36,9 +36,6 @@ const Modal = ({ isOpen, hideForm, refresh }) => {
         });
     };
 
-
-
-    //console.log(event)
 
     if (!isOpen) {
         return null
@@ -52,12 +49,13 @@ const Modal = ({ isOpen, hideForm, refresh }) => {
                 <div className="create-event">
                     <button className="create-event__close-btn" onClick={hideForm}>+</button>
 
-                    <form className="event-form">
+                    <form className="event-form" onSubmit={handleSubmit}>
                         <input type="text"
                             name="title"
                             placeholder='title'
                             className="event-form__field"
                             onChange={handleChange}
+                            required minLength="3" maxLength="25"
                         />
                         <div className="event-form__time">
 
@@ -65,11 +63,13 @@ const Modal = ({ isOpen, hideForm, refresh }) => {
                                 name="date"
                                 className="event-form__field"
                                 onChange={handleChange}
+                                required
                             />
                             <input type="time"
                                 name="startTime"
                                 className="event-form__field"
                                 onChange={handleChange}
+                                required
 
                             />
                             <span>-</span>
@@ -77,6 +77,7 @@ const Modal = ({ isOpen, hideForm, refresh }) => {
                                 name="endTime"
                                 className="event-form__field"
                                 onChange={handleChange}
+                                required
                             />
                         </div>
                         <textarea name="description"
@@ -86,7 +87,7 @@ const Modal = ({ isOpen, hideForm, refresh }) => {
 
                         </textarea>
 
-                        <button type="submit" className="event-form__submit-btn" onClick={handleSubmit}>Create</button>
+                        <button type="submit" className="event-form__submit-btn" >Create</button>
                     </form>
                 </div>
             </div>

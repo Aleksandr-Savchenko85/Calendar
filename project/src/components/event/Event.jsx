@@ -1,19 +1,19 @@
 import React from 'react';
-import events from '../../gateway/events';
 import './event.scss';
-
+import deleteTask from '../../gateway/events';
 //console.log(events)
-const Event = ({ height, marginTop, title, time, }) => {
+const Event = ({ title, time}) => {
   
-    const eventStyle = {
-        height,
-        marginTop
-    }
+    // const eventStyle = {
+    //     height,
+    //     marginTop
+    // }
 
     return (
-        <div style={eventStyle} className="event" >
+        <div className="event" >
             <div className="event__title">{title}</div>
             <div className="event__time">{time}</div>
+            <button className='delete-event-btn'>delete</button>
         </div >
     )
 }

@@ -29,12 +29,12 @@ export const getTask = () => {
         })
 }
 
-export const deleteTask = (id) => {
-    return fetch(`${baseUrl} ${id}`, {
-
+export const deleteTask = id => {
+    return fetch(`${baseUrl}/${id}`, {
+        method: 'DELETE',
     }).then(response => {
-        if (response.ok) {
-            throw new Error('Server Error!')
+        if (!response.ok) {
+            throw new Error(" Server Error");
         }
     })
 }
@@ -60,7 +60,7 @@ export const deleteTask = (id) => {
 
 
 
-const events = [{
+/* const events = [{
         id: 1,
         title: 'Go to the gym',
         description: 'some text here',
@@ -92,4 +92,4 @@ const events = [{
 
 
 //console.log(events)
-export default events;
+export default events; */

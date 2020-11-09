@@ -1,6 +1,7 @@
 .event {
     position: absolute;
-    width: 20%;
+    width: 100%;
+    height: 70px;
     background-color: cornflowerblue;
     z-index: 1;
     border-radius: 8px;
@@ -11,15 +12,16 @@
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-        margin-bottom: 8px;
     }
     &:hover {
         font-weight: bold;
-        background-color: red;
+        background-color: rgb(247, 99, 40);
     }
 }
 
 .delete-event-btn {
+    margin-left: 190px;
+    background-color: cornflowerblue;
     cursor: pointer;
     border: none;
 }

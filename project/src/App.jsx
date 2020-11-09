@@ -16,8 +16,16 @@ const App = () => {
     const [event, setEvent] = useState([]);
 
     const weekDates = generateWeekRange(getWeekStartDate(weekStartDate));
-    console.log(event)
-    //console.log(weekDates)
+
+
+    useEffect(() => {
+        getTask().then(responce => {
+            setEvent(responce)
+        })
+    }, []
+    );
+    //console.log(event)
+   
 
     useEffect(() => {
         getTask().then(responce => {
@@ -26,19 +34,13 @@ const App = () => {
     }, [event.length]
     );
 
-    useEffect(() => {
-        getTask().then(responce => {
-            setEvent(responce)
-        })
-    }, []
-    );
 
-    const refresh = () => {
+     const refresh = () => {
         getTask().then(responce => {
             console.log(responce)
         })
     };
-
+ 
 
 
     const goPrev = () => {
@@ -85,8 +87,8 @@ const App = () => {
             <Modal
                 isOpen={isOpen}
                 hideForm={hideForm}
-                refresh={() =>  refresh()
-                }
+                 refresh={() =>  refresh()
+                } 
             />
 
 
@@ -105,14 +107,3 @@ const App = () => {
 export default App;
 
 
-//style for active data
-/* const style = {
-    color: 'white',
-    width: '50px',
-    alignItems: ' center',
-    justifyContent: 'center',
-    display: 'flex',
-    height: '50px',
-    borderRadius: '30px'
-}
- */
