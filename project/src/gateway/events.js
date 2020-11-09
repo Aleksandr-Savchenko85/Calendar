@@ -10,7 +10,7 @@ export const createNewTask = taskData => {
         body: JSON.stringify(taskData),
     }).then(response => {
         if (!response.ok) {
-            throw new Error("Failed to create new task")
+            throw new Error("Internal Server Error.")
         }
     })
 };
@@ -34,7 +34,7 @@ export const deleteTask = id => {
         method: 'DELETE',
     }).then(response => {
         if (!response.ok) {
-            throw new Error(" Server Error");
+            throw new Error(" Internal Server Error. Can't display events");
         }
     })
 }
