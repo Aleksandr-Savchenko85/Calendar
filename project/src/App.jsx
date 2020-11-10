@@ -5,6 +5,7 @@ import { getWeekStartDate, generateWeekRange, addDays, currentDate } from '../sr
 import './common.scss';
 import Modal from './components/modal/Modal.jsx';
 import { getTask } from '..//src/gateway/events';
+import RedLine from '../src/components/redLine/RadLine';
 
 
 
@@ -39,7 +40,7 @@ const App = () => {
         setEvent([...event, task])
 
     };
-  
+
 
 
     const goPrev = () => {
@@ -69,7 +70,7 @@ const App = () => {
     return (
 
         <>
-
+             
             <Header
 
                 showForm={showForm}

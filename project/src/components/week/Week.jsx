@@ -13,6 +13,7 @@ const Week = ({ weekDates, events }) => {
                 const dayEvents = events.filter(event => event.date === moment(dayStart).format("YYYY-MM-DD"));
 
                 return (
+                   
                     <Day key={dayStart.getDate()} dataDay={dayStart.getDate()} dayEvents={dayEvents} />
 
                 )

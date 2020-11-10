@@ -14,6 +14,7 @@ const Calendar = ({ weekDates, weekStartDate, events }) => {
 
     return (
         <section className="calendar" >
+            
             <Navigation
                 weekDates={weekDates}
                 weekStartDate={weekStartDate}

@@ -1,7 +1,7 @@
 import React from 'react';
 import Event from '../event/Event';
 //import { formatMins } from '../../../src/utils/dateUtils.js';
-
+import RedLine from '..//redLine/RadLine';
 
 const Hour = ({ dataHour, hourEvents }) => {
 
@@ -12,13 +12,15 @@ const Hour = ({ dataHour, hourEvents }) => {
             {hourEvents.map(({ id, title, startTime, endTime }) => {
                
 
-                return (
+                return (<>
+                    <RedLine/>
                     <Event
                         id={id}
                         key={id}
                         time={`${startTime} - ${endTime}`}
                         title={title}
                     />
+                    </>
                 )
             })}
         </div>
