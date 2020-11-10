@@ -4,7 +4,7 @@ import Calendar from './components/calendar/Calendar.jsx';
 import { getWeekStartDate, generateWeekRange, addDays, currentDate } from '../src/utils/dateUtils.js';
 import './common.scss';
 import Modal from './components/modal/Modal.jsx';
-import { getTask, deleteTask } from '..//src/gateway/events';
+import { getTask } from '..//src/gateway/events';
 
 
 
@@ -19,13 +19,14 @@ const App = () => {
 
 
     useEffect(() => {
-        getTask().then(responce => {
-            setEvent(responce)
+        getTask().then(response => {
+            setEvent(response)
         })
     }, []
     );
+
+
     //console.log(event)
-   
 
     useEffect(() => {
         getTask().then(responce => {
@@ -34,13 +35,11 @@ const App = () => {
     }, [event.length]
     );
 
+    const refresh = (task) => {
+        setEvent([...event, task])
 
-     const refresh = () => {
-        getTask().then(responce => {
-            console.log(responce)
-        })
     };
- 
+  
 
 
     const goPrev = () => {
@@ -67,9 +66,6 @@ const App = () => {
         setIsOpen(false)
     };
 
-
-
-
     return (
 
         <>
@@ -87,8 +83,7 @@ const App = () => {
             <Modal
                 isOpen={isOpen}
                 hideForm={hideForm}
-                 refresh={() =>  refresh()
-                } 
+                refresh={refresh}
             />
 
 

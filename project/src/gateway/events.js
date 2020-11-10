@@ -19,15 +19,12 @@ export const getTask = () => {
     return fetch(baseUrl)
         .then(response => {
             if (response.ok) {
-                return response.json();
+                return response.json()
             }
-        }).then(tasksList => {
-            return tasksList.map(({ id, ...task }) => ({
-                id: id,
-                ...task
-            }));
+            throw new Error("Internal Server Error. Can't display events")
         })
 }
+
 
 export const deleteTask = id => {
     return fetch(`${baseUrl}/${id}`, {
@@ -39,25 +36,19 @@ export const deleteTask = id => {
     })
 }
 
-
 /* export const getTask = () => {
     return fetch(baseUrl)
         .then(response => {
             if (response.ok) {
-                return response.json()
-
-
-
+                return response.json();
             }
-            throw new Error("Failed to fetch task")
+        }).then(tasksList => {
+            return tasksList.map(({ id, ...task }) => ({
+                id: id,
+                ...task
+            }));
         })
 } */
-
-
-/* export const deleteTask = id => {
-    return fetch(`${baseUrl}/${id}`)
-} */
-
 
 
 /* const events = [{

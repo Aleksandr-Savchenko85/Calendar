@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './modal.scss';
-import { createNewTask, getTask, } from '../../gateway/events';
+import { createNewTask} from '../../gateway/events';
 
 
 const Modal = ({ isOpen, hideForm, refresh }) => {
@@ -23,11 +23,11 @@ const Modal = ({ isOpen, hideForm, refresh }) => {
     const handleSubmit = () => {
         event.preventDefault();
         createNewTask(task);
-        refresh();
+        refresh(task);
         clearInputs();
         hideForm();
     };
-
+    
     const handleChange = (event) => {
         const { name, value } = event.target;
         setTask({
