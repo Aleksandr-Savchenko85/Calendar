@@ -12,8 +12,7 @@ const Event = ({ title, time, id}) => {
       
     }       
  
-   
-    return (
+       return (
         <div className="event" >
             <div className="event__title">{title}</div>
             <div className="event__time">{time}</div>
