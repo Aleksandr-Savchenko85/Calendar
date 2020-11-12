@@ -41,6 +41,20 @@ const App = () => {
 
     };
 
+    const refreshPage =()=>{
+        getTask().then(responce=>{
+            setEvent(responce)
+        })
+
+    };
+
+
+    const handleOnDelete =()=>{
+        getTask().then(responce=>{
+            setEvent(responce)
+        })
+    };
+
 
 
     const goPrev = () => {
@@ -92,6 +106,9 @@ const App = () => {
                 weekDates={weekDates}
                 weekStartDate={weekStartDate}
                 events={event}
+                handleOnDelete={handleOnDelete}
+                refreshPage={refreshPage}
+              
 
             />
         </>

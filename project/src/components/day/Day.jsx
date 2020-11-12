@@ -3,7 +3,7 @@ import Hour from '../hour/Hour';
 import './day.scss';
 
 
-const Day = ({ dataDay, dayEvents }) => {
+const Day = ({ dataDay, dayEvents, handleOnDelete, refreshPage}) => {
     const hours = Array(24).fill().map((val, index) => index < 10 ? `0${index}` : `${index}`);
     return (
         <div className="calendar__day" data-day={dataDay}>
@@ -19,6 +19,9 @@ const Day = ({ dataDay, dayEvents }) => {
                         key={dataDay + hour}
                         dataHour={hour}
                         hourEvents={hourEvents}
+                        handleOnDelete={handleOnDelete}
+                        refreshPage={refreshPage}
+                        
                     ></Hour>
                     
                 )

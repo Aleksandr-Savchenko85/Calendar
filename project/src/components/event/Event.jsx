@@ -4,15 +4,17 @@ import './event.scss';
 import { deleteTask } from '../../gateway/events';
 
 
-const Event = ({ title, time, id }) => {
+const Event = ({ title, time, id, handleOnDelete, refreshPage }) => {
 
-    const resetPage = () => {
-        return location.reload()
-    }
 
-    const handleDeleteEvent = (id) => {
+
+    const handleDelete = (id) => {
         deleteTask(id);
-        resetPage();
+        handleOnDelete();
+        refreshPage();
+
+
+
 
 
     }
@@ -21,7 +23,7 @@ const Event = ({ title, time, id }) => {
         <div className="event" >
             <div className="event__title">{title}</div>
             <div className="event__time">{time}</div>
-            <button className='delete-event-btn' onClick={() => handleDeleteEvent(id)}>delete</button>
+            <button className='delete-event-btn' onClick={() => handleDelete(id)}>delete</button>
         </div >
     )
 }
