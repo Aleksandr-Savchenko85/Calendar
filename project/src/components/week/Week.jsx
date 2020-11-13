@@ -2,7 +2,6 @@ import React from 'react';
 import Day from '../day/Day';
 import './week.scss';
 import moment from "moment";
-
 const Week = ({ weekDates, events, handleOnDelete, refreshPage }) => {
 
     return (
@@ -14,15 +13,16 @@ const Week = ({ weekDates, events, handleOnDelete, refreshPage }) => {
 
                 return (
 
-                    <Day 
-                    key={dayStart.getDate()} 
-                    dataDay={dayStart.getDate()} 
-                    dayEvents={dayEvents}
-                    handleOnDelete={handleOnDelete}
-                    refreshPage={refreshPage}
-                   
-                    
-                    />
+                    <Day
+                        key={dayStart.getDate()}
+                        dataDay={dayStart.getDate()}
+                        dayEvents={dayEvents}
+                        handleOnDelete={handleOnDelete}
+                        refreshPage={refreshPage}></Day>
+
+
+
+
 
                 )
             })}
