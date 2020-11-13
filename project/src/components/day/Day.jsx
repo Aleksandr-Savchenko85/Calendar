@@ -2,21 +2,27 @@ import React from 'react';
 import Hour from '../hour/Hour';
 import './day.scss';
 import RedLine from '..//redLine/RadLine';
-import moment from 'moment';
+import { currentDate } from '../../utils/dateUtils';
 
 
+const Day = ({ dataDay, dayEvents, handleOnDelete, refreshPage, weekStartDate, weekDates }) => {
+const currentSlot = weekStartDate.getDate()
 
-const nowDay = new Date().getDate()
-const currentDay = moment().format("DD");
-//console.log(nowDay)
-//console.log(currentDay)
+    //console.log(currentSlot)
+    //console.log(weekStartDate.getDate())
 
-const Day = ({ dataDay, dayEvents, handleOnDelete, refreshPage }) => {
     const hours = Array(24).fill().map((val, index) => index < 10 ? `0${index}` : `${index}`);
+    
     return (
-        <div className="calendar__day" data-day={dataDay}> <RedLine />
+        
+        <div className="calendar__day" data-day={dataDay}>
+              <RedLine 
+              currentSlot={currentSlot}
+              weekStartDate={weekStartDate}
+              />
+
             {hours.map(hour => {
-                // console.log(hour)       
+
                 const hourEvents = dayEvents?.filter(event =>
                     event?.startTime.slice(0, 2) === hour)
 
@@ -29,7 +35,7 @@ const Day = ({ dataDay, dayEvents, handleOnDelete, refreshPage }) => {
                         handleOnDelete={handleOnDelete}
                         refreshPage={refreshPage}
 
-                    > </Hour>
+                    /> 
 
                 )
 

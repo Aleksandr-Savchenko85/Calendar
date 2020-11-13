@@ -8,7 +8,7 @@ import '../calendar/calendar.scss';
 }  
 //console.log(new Date().getHours() * 59 + new Date().getMinutes())
 
- const RedLine = () => {
+ const RedLine = ({currentSlot, weekStartDate}) => {
     const [time, setTime] = useState(getDistance());
 
       useEffect(()=>{
@@ -23,6 +23,8 @@ import '../calendar/calendar.scss';
       };
        
     return (
+     
+
         <div style={style} className="red-line"></div>
     )
  

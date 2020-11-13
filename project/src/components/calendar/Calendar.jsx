@@ -26,6 +26,7 @@ const Calendar = ({ weekDates, weekStartDate, events, handleOnDelete, refreshPag
                     <Sidebar />
                     <Week
                         weekDates={weekDates}
+                        weekStartDate={weekStartDate}
                         events={events}
                         handleOnDelete={handleOnDelete} 
                         refreshPage={refreshPage}

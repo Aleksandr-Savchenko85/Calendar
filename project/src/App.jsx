@@ -18,7 +18,7 @@ const App = () => {
 
     const weekDates = generateWeekRange(getWeekStartDate(weekStartDate));
 
-
+   
     useEffect(() => {
         getTask().then(response => {
             setEvent(response)
@@ -27,7 +27,7 @@ const App = () => {
     );
 
 
-    //console.log(event)
+    //console.log(weekStartDate)
 
     useEffect(() => {
         getTask().then(responce => {

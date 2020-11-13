@@ -2,7 +2,7 @@ import React from 'react';
 import Day from '../day/Day';
 import './week.scss';
 import moment from "moment";
-const Week = ({ weekDates, events, handleOnDelete, refreshPage }) => {
+const Week = ({ weekDates, events, handleOnDelete, refreshPage, weekStartDate }) => {
 
     return (
         <div className="calendar__week">
@@ -14,15 +14,13 @@ const Week = ({ weekDates, events, handleOnDelete, refreshPage }) => {
                 return (
 
                     <Day
+                        weekStartDate={weekStartDate}
+                        weekDates={weekDates}
                         key={dayStart.getDate()}
                         dataDay={dayStart.getDate()}
                         dayEvents={dayEvents}
                         handleOnDelete={handleOnDelete}
                         refreshPage={refreshPage}></Day>
-
-
-
-
 
                 )
             })}

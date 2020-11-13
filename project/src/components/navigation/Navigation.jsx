@@ -21,18 +21,16 @@ const Navigation = ({ weekDates, weekStartDate }) => {
         display: 'flex',
         height: '50px',
         borderRadius: '30px'
-    }
+    };
 
-  
-
-
+    
 
     return (
         <header className="calendar__header">
             {weekDates.map(dayDate =>
                 <div key={dayDate} className="calendar__day-label day-label">
                     <span className="day-label__day-name">{days[dayDate.getDay()]}</span>
-                    <span className="day-label__day-number" style={dayDate.getDate() === activeDay? stylesCurrentDay: null}>{dayDate.getDate()}</span>
+                    <span className="day-label__day-number" style={dayDate.getDate() === activeDay ? stylesCurrentDay : null}>{dayDate.getDate()}</span>
                 </div>
 
             )}
