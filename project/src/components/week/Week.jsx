@@ -3,7 +3,7 @@ import Day from '../day/Day';
 import './week.scss';
 import moment from "moment";
 
-const Week = ({ weekDates, events, handleOnDelete, refreshPage}) => {
+const Week = ({ weekDates, events, handleOnDelete, refreshPage }) => {
 
     return (
         <div className="calendar__week">

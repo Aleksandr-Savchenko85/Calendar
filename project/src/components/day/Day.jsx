@@ -12,7 +12,6 @@ const Day = ({ dataDay, dayEvents, handleOnDelete, refreshPage}) => {
                 const hourEvents = dayEvents?.filter(event =>
                     event?.startTime.slice(0, 2) === hour)
 
-
                 return (
                    
                     <Hour

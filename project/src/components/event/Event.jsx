@@ -13,10 +13,6 @@ const Event = ({ title, time, id, handleOnDelete, refreshPage }) => {
         handleOnDelete();
         refreshPage();
 
-
-
-
-
     }
 
     return (
