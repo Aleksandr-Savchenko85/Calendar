@@ -2,24 +2,21 @@ import React from 'react';
 import Hour from '../hour/Hour';
 import './day.scss';
 import RedLine from '..//redLine/RadLine';
-import { currentDate } from '../../utils/dateUtils';
 
 
-const Day = ({ dataDay, dayEvents, handleOnDelete, refreshPage, weekStartDate, weekDates }) => {
-const currentSlot = weekStartDate.getDate()
 
-    //console.log(currentSlot)
+const Day = ({ dataDay, dayEvents, handleOnDelete, refreshPage, weekStartDate }) => {
+
+    const currentCalendarDay = weekStartDate.getDate()
+    //console.log(currentCalendarDay)
     //console.log(weekStartDate.getDate())
 
     const hours = Array(24).fill().map((val, index) => index < 10 ? `0${index}` : `${index}`);
-    
+
     return (
-        
+
         <div className="calendar__day" data-day={dataDay}>
-              <RedLine 
-              currentSlot={currentSlot}
-              weekStartDate={weekStartDate}
-              />
+            {currentCalendarDay == dataDay ? <RedLine /> : null}
 
             {hours.map(hour => {
 
@@ -35,7 +32,7 @@ const currentSlot = weekStartDate.getDate()
                         handleOnDelete={handleOnDelete}
                         refreshPage={refreshPage}
 
-                    /> 
+                    />
 
                 )
 
