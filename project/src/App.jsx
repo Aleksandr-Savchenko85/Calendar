@@ -5,6 +5,7 @@ import { getWeekStartDate, generateWeekRange, addDays, currentDate } from '../sr
 import './common.scss';
 import Modal from './components/modal/Modal.jsx';
 import { getTask } from '..//src/gateway/events';
+import PropTypes from 'prop-types';
 
 const App = () => {
 
@@ -95,6 +96,16 @@ const App = () => {
 
 }
 
+
 export default App;
 
+App.prototype = {
+    optionalArray: PropTypes.array,
+    optionalBool: PropTypes.bool,
+    optionalFunc: PropTypes.func,
+    optionalNumber: PropTypes.number,
+    optionalObject: PropTypes.object,
+    optionalString: PropTypes.string,
+    optionalSymbol: PropTypes.symbol,
+}
 
