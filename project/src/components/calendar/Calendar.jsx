@@ -5,9 +5,6 @@ import Sidebar from '../sidebar/Sidebar';
 import './calendar.scss';
 
 
-
-
-
 const Calendar = ({ weekDates, weekStartDate, events, handleOnDelete, refreshPage }) => {
 
 
