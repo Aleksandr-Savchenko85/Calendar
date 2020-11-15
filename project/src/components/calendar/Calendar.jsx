@@ -7,17 +7,12 @@ import './calendar.scss';
 
 const Calendar = ({ weekDates, weekStartDate, events, handleOnDelete, refreshPage }) => {
 
-
-
     return (
         <section className="calendar" >
-
             <Navigation
                 weekDates={weekDates}
                 weekStartDate={weekStartDate}
-
             />
-
             <div className="calendar__body">
                 <div className="calendar__week-container">
                     <Sidebar />
@@ -25,18 +20,14 @@ const Calendar = ({ weekDates, weekStartDate, events, handleOnDelete, refreshPag
                         weekDates={weekDates}
                         weekStartDate={weekStartDate}
                         events={events}
-                        handleOnDelete={handleOnDelete} 
+                        handleOnDelete={handleOnDelete}
                         refreshPage={refreshPage}
-                        
-                        />
 
+                    />
                 </div>
             </div>
         </section>
     )
-
-
-
 }
 export default Calendar;
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './modal.scss';
-import { createNewTask} from '../../gateway/events';
+import { createNewTask } from '../../gateway/events';
 
 
 const Modal = ({ isOpen, hideForm, refresh }) => {
@@ -27,7 +27,7 @@ const Modal = ({ isOpen, hideForm, refresh }) => {
         clearInputs();
         hideForm();
     };
-    
+
     const handleChange = (event) => {
         const { name, value } = event.target;
         setTask({
@@ -36,12 +36,9 @@ const Modal = ({ isOpen, hideForm, refresh }) => {
         });
     };
 
-
     if (!isOpen) {
         return null
     }
-
-
     return (
         <div className="modal overlay">
 
@@ -84,7 +81,6 @@ const Modal = ({ isOpen, hideForm, refresh }) => {
                             placeholder=""
                             onChange={handleChange}
                             className="event-form__field">
-
                         </textarea>
 
                         <button type="submit" className="event-form__submit-btn" >Create</button>
@@ -95,11 +91,7 @@ const Modal = ({ isOpen, hideForm, refresh }) => {
 
     )
 
-
-
 }
-
-
 
 export default Modal;
 

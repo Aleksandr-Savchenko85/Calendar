@@ -6,10 +6,6 @@ import './common.scss';
 import Modal from './components/modal/Modal.jsx';
 import { getTask } from '..//src/gateway/events';
 
-
-
-
-
 const App = () => {
 
     const [weekStartDate, setWeekStartDate] = useState(new Date());
@@ -18,7 +14,6 @@ const App = () => {
 
     const weekDates = generateWeekRange(getWeekStartDate(weekStartDate));
 
-   
     useEffect(() => {
         getTask().then(response => {
             setEvent(response)
@@ -38,27 +33,22 @@ const App = () => {
 
     };
 
-    const refreshPage =()=>{
-        getTask().then(responce=>{
+    const refreshPage = () => {
+        getTask().then(responce => {
             setEvent(responce)
         })
 
     };
 
-
-    const handleOnDelete =()=>{
-        getTask().then(responce=>{
+    const handleOnDelete = () => {
+        getTask().then(responce => {
             setEvent(responce)
         })
     };
-
-
 
     const goPrev = () => {
         setWeekStartDate(addDays(weekStartDate, -7))
     };
-
-
 
     const goNext = () => {
         setWeekStartDate(addDays(weekStartDate, +7))
@@ -67,7 +57,6 @@ const App = () => {
     const toDay = () => {
         setWeekStartDate(currentDate())
     };
-
 
     const showForm = () => {
         setIsOpen(true)
@@ -79,11 +68,9 @@ const App = () => {
     };
 
     return (
-
         <>
-             
-            <Header
 
+            <Header
                 showForm={showForm}
                 toDay={toDay}
                 goNext={goNext}
@@ -91,26 +78,20 @@ const App = () => {
                 weekDates={weekDates}
                 weekStartDate={weekStartDate}
             />
-
             <Modal
                 isOpen={isOpen}
                 hideForm={hideForm}
                 refresh={refresh}
             />
-
-
             <Calendar
                 weekDates={weekDates}
                 weekStartDate={weekStartDate}
                 events={event}
                 handleOnDelete={handleOnDelete}
                 refreshPage={refreshPage}
-              
-
             />
         </>
     )
-
 
 }
 

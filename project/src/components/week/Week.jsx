@@ -6,13 +6,11 @@ const Week = ({ weekDates, events, handleOnDelete, refreshPage, weekStartDate })
 
     return (
         <div className="calendar__week">
-            {weekDates.map(dayStart => {
-                // const dayEnd = moment(new Date(dayStart.getTime()).setHours(dayStart.getHours() + 24)).format("YYYY-MM-DD");
 
+            {weekDates.map(dayStart => {
                 const dayEvents = events.filter(event => event.date === moment(dayStart).format("YYYY-MM-DD"));
 
                 return (
-
                     <Day
                         weekStartDate={weekStartDate}
                         weekDates={weekDates}
