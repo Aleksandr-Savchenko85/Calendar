@@ -1,25 +1,15 @@
 import React, { useState } from 'react';
-import generateWeekRange from '../../utils/dateUtils.js';
 import { months } from '../../utils/dateUtils.js';
+import PropTypes from 'prop-types';
 import './header.scss';
 
 
-const Header = ({ goPrev, goNext, toDay, weekDates, showForm}) => {
-    //console.log(isOpen)
-    //console.log(showForm)
+const Header = ({ goPrev, goNext, toDay, weekDates, showForm }) => {
 
-      
-    //console.log(weekDates)
-    //let currentMonth = new Date().getMonth(); // current month
-    //console.log(months[currentMonth+1]) //October
-    //let nextMonthAfterCurrent = months[currentMonth + 1] // next month after current 
     let nameMonthFirstDayOfWeek = months[weekDates[0].getMonth()];
-    //console.log(nameMonthFirstDayOfWeek)
     let nameMonthLastDayOfWeek = months[weekDates[6].getMonth()];
-    //console.log(nameMonthLastDayOfWeek)
 
     return (
-
         <header className="header">
             <button className="button create-event-btn" onClick={showForm}>
                 <i className="fas fa-plus create-event-btn__icon"></i>
@@ -51,13 +41,16 @@ const Header = ({ goPrev, goNext, toDay, weekDates, showForm}) => {
 
 export default Header;
 
+Header.propTypes = {
+    goPrev: PropTypes.func,
+    goNext: PropTypes.func,
+    toDay: PropTypes.func,
+    weekDates: PropTypes.array,
+    showForm: PropTypes.func,
+
+}
 
 
-/*  background-color: red; 
-color: white;
-width: 50px;
-align-items: center;
-justify-content: center;
-display: flex;
-height: 50px;
-border-radius: 30px; */ 
+
+
+

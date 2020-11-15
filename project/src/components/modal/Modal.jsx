@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './modal.scss';
 import { createNewTask } from '../../gateway/events';
-
+import PropTypes from 'prop-types';
 
 const Modal = ({ isOpen, hideForm, refresh }) => {
 
@@ -95,6 +95,11 @@ const Modal = ({ isOpen, hideForm, refresh }) => {
 
 export default Modal;
 
+Modal.propTypes = {
+    isOpen: PropTypes.bool,
+    hideForm: PropTypes.func,
+    refresh: PropTypes.func,
 
+}
 
 

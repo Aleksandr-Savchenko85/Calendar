@@ -1,6 +1,6 @@
 import React from 'react';
 import Event from '../event/Event';
-
+import PropTypes from 'prop-types';
 
 const Hour = ({ dataHour, hourEvents, handleOnDelete, refreshPage }) => {
 
@@ -27,3 +27,10 @@ const Hour = ({ dataHour, hourEvents, handleOnDelete, refreshPage }) => {
 }
 
 export default Hour;
+
+Hour.propTypes = {
+    dataHour: PropTypes.string,
+    hourEvents: PropTypes.array,
+    handleOnDelete: PropTypes.func,
+    refreshPage: PropTypes.func,
+} 

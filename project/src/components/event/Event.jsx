@@ -1,7 +1,7 @@
 import React from 'react';
 import './event.scss';
 import { deleteTask } from '../../gateway/events';
-
+import PropTypes from 'prop-types';
 
 const Event = ({ title, time, id, handleOnDelete, refreshPage }) => {
 
@@ -21,4 +21,12 @@ const Event = ({ title, time, id, handleOnDelete, refreshPage }) => {
 }
 
 export default Event;
+
+Event.propTypes = {
+    title: PropTypes.string,
+    time: PropTypes.string,
+    id: PropTypes.string,
+    handleOnDelete: PropTypes.func,
+    refreshPage: PropTypes.func,
+}
 

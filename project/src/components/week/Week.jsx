@@ -2,6 +2,8 @@ import React from 'react';
 import Day from '../day/Day';
 import './week.scss';
 import moment from "moment";
+import PropTypes from 'prop-types';
+
 const Week = ({ weekDates, events, handleOnDelete, refreshPage, weekStartDate }) => {
 
     return (
@@ -27,3 +29,11 @@ const Week = ({ weekDates, events, handleOnDelete, refreshPage, weekStartDate })
 }
 
 export default Week;
+
+Week.propTypes = {
+    weekDates: PropTypes.array,
+    weekStartDate: PropTypes.object,
+    events: PropTypes.array,
+    handleOnDelete: PropTypes.func,
+    refreshPage: PropTypes.func,
+} 

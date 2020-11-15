@@ -2,6 +2,8 @@ import React from 'react';
 import Hour from '../hour/Hour';
 import './day.scss';
 import RedLine from '..//redLine/RadLine';
+import PropTypes from 'prop-types';
+
 
 const Day = ({ dataDay, dayEvents, handleOnDelete, refreshPage, weekStartDate }) => {
 
@@ -35,3 +37,11 @@ const Day = ({ dataDay, dayEvents, handleOnDelete, refreshPage, weekStartDate })
 }
 
 export default Day;
+
+Day.propTypes = {
+    dataDay: PropTypes.number,
+    weekStartDate: PropTypes.object,
+    dayEvents: PropTypes.array,
+    handleOnDelete: PropTypes.func,
+    refreshPage: PropTypes.func,
+} 
