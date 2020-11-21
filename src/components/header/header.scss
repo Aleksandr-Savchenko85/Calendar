@@ -1,14 +1,16 @@
 .header {
+    min-width: 855px;
     display: flex;
-    height: 60px;
+    min-height: 60px;
     padding: 0 48px;
     align-items: center;
     background-color: cornsilk;
     border: 1px solid gray;
-    min-width: 910px;
+   
 }
 
 .create-event-btn {
+   position: relative;
     padding: 0 16px;
     margin-top: 10px;
     &__icon {
@@ -18,7 +20,8 @@
 
 .navigation {
     &__today-btn {
-        margin-left: 32px;
+        position: relative;
+        margin-left: 50px;
         padding: 0 16px;
     }
     &__nav-icon {
@@ -26,7 +29,8 @@
         margin-left: 35px;
     }
     &__displayed-month {
-        margin-left: 230px;
+        display: inline-block;
+        margin-left: 50px;
         font-weight: 700;
         font-size: 40px;
         color: rgb(52, 11, 90);
